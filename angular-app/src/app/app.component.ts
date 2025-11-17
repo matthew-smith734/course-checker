@@ -29,7 +29,15 @@ export class AppComponent {
     this.isLoading = true;
     this.results = [];
 
-    const courseList = this.courses.split(',').map(c => c.trim()).filter(c => c.length > 0);
+    // Clean the input by removing all Unicode whitespace and invisible characters
+    // \s matches all whitespace, \u200B is zero-width space, \uFEFF is BOM
+    const cleanedCourses = this.courses.replace(/[\s\u200B\u200C\u200D\uFEFF]/g, ' ');
+    const courseList = cleanedCourses.split(',')
+      .map(c => c.trim().replace(/[^\w]/g, ''))  // Remove any remaining non-word characters
+      .filter(c => c.length > 0);
+
+    console.log('Original input:', this.courses);
+    console.log('Cleaned courses:', courseList);
 
     if (courseList.length === 0) {
       alert('No courses found in input');

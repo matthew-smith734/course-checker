@@ -1,0 +1,206 @@
+{
+  "wallTime": 178,
+  "cpuTime": 1,
+  "truncated": false,
+  "executionModel": "stateless",
+  "outcome": "ok",
+  "scriptVersion": {
+    "id": "c050bc66-22a5-460e-bbcb-0cfc20069217"
+  },
+  "scriptName": "pages-worker--9185661-production",
+  "diagnosticsChannelEvents": [],
+  "exceptions": [],
+  "logs": [
+    {
+      "message": [
+        "=== Function called ==="
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "Method:",
+        "POST"
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "URL:",
+        "https://course.ryeng.ca/api/getPageableCourses"
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "Path:",
+        "/api/getPageableCourses"
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "=== POST Request ==="
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "Content-Type:",
+        "application/json"
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "POST body:",
+        "{\"courseCodeAndTitleProps\":{\"courseCode\":\"CSE270H1\",\"courseTitle\":\"\",\"courseSectionCode\":\"\",\"searchCourseDescription\":false},\"departmentProps\":[],\"campuses\":[],\"sessions\":[\"20261\"],\"requirementProps\":[],\"instructor\":\"\",\"courseLevels\":[],\"deliveryModes\":[],\"dayPreferences\":[],\"timePreferences\":[],\"divisions\":[\"ARTSC\"],\"creditWeights\":[],\"availableSpace\":false,\"waitListable\":false,\"page\":1,\"pageSize\":20,\"direction\":\"asc\"}"
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "POST body length:",
+        423
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "Fetching:",
+        "https://api.easi.utoronto.ca/ttb/getPageableCourses"
+      ],
+      "level": "log",
+      "timestamp": 1763416159207
+    },
+    {
+      "message": [
+        "Response status:",
+        200
+      ],
+      "level": "log",
+      "timestamp": 1763416159384
+    },
+    {
+      "message": [
+        "Response body length:",
+        35188
+      ],
+      "level": "log",
+      "timestamp": 1763416159384
+    },
+    {
+      "message": [
+        "Response preview:",
+        "<TTBResponse><payload><pageableCourse><courses><courses><id>67fcf9bede40c67f1da33c4d</id><name>Community Dis/Engagement and Solidarity</name><ucName/><code>CSE270H1</code><sectionCode>S</sectionCode><"
+      ],
+      "level": "log",
+      "timestamp": 1763416159384
+    }
+  ],
+  "eventTimestamp": 1763416159207,
+  "event": {
+    "request": {
+      "url": "https://course.ryeng.ca/api/getPageableCourses",
+      "method": "POST",
+      "headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, br",
+        "accept-language": "en-US,en;q=0.9",
+        "cf-connecting-ip": "70.51.209.121",
+        "cf-connecting-o2o": "1",
+        "cf-ipcountry": "CA",
+        "cf-ray": "9a026ff2f8df38e2-YYZ",
+        "cf-visitor": "{\"scheme\":\"https\"}",
+        "connection": "Keep-Alive",
+        "content-length": "423",
+        "content-type": "application/json",
+        "host": "course.ryeng.ca",
+        "origin": "https://course.ryeng.ca",
+        "priority": "u=1, i",
+        "referer": "https://course.ryeng.ca/",
+        "sec-ch-ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "x-forwarded-for": "70.51.209.121",
+        "x-forwarded-proto": "https",
+        "x-real-ip": "70.51.209.121"
+      },
+      "cf": {
+        "httpProtocol": "HTTP/3",
+        "clientAcceptEncoding": "gzip, deflate, br",
+        "requestPriority": "",
+        "edgeRequestKeepAliveStatus": 1,
+        "requestHeaderNames": {},
+        "clientTcpRtt": 0,
+        "colo": "YYZ",
+        "asn": 577,
+        "asOrganization": "Sympatico HSE",
+        "country": "CA",
+        "isEUCountry": false,
+        "city": "Toronto",
+        "continent": "NA",
+        "region": "Ontario",
+        "regionCode": "ON",
+        "timezone": "America/Toronto",
+        "longitude": "-79.39864",
+        "latitude": "43.70643",
+        "postalCode": "M5A",
+        "tlsVersion": "",
+        "tlsCipher": "",
+        "tlsClientRandom": "",
+        "tlsClientCiphersSha1": "",
+        "tlsClientExtensionsSha1": "",
+        "tlsClientExtensionsSha1Le": "",
+        "tlsClientHelloLength": "0",
+        "tlsClientAuth": {
+          "certPresented": "0",
+          "certVerified": "NONE",
+          "certRevoked": "0",
+          "certIssuerDN": "",
+          "certSubjectDN": "",
+          "certIssuerDNRFC2253": "",
+          "certSubjectDNRFC2253": "",
+          "certIssuerDNLegacy": "",
+          "certSubjectDNLegacy": "",
+          "certSerial": "",
+          "certIssuerSerial": "",
+          "certSKI": "",
+          "certIssuerSKI": "",
+          "certFingerprintSHA1": "",
+          "certFingerprintSHA256": "",
+          "certNotBefore": "",
+          "certNotAfter": ""
+        },
+        "verifiedBotCategory": "",
+        "pagesHostName": "course-checker.pages.dev",
+        "botManagement": {
+          "corporateProxy": false,
+          "verifiedBot": false,
+          "jsDetection": {
+            "passed": false
+          },
+          "staticResource": false,
+          "detectionIds": {},
+          "score": 99
+        }
+      }
+    },
+    "response": {
+      "status": 200
+    }
+  },
+  "id": 19
+}
