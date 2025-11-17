@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  
+  <div class="form-group">
+    <label for="semester">Semester:</label>
+    <input 
+      id="semester" 
+      type="text" 
+      [(ngModel)]="semester" 
+      placeholder="Enter semester (e.g., 20259)"
+      [disabled]="isProcessing"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="courses">Courses:</label>
+    <input 
+      id="courses" 
+      type="text" 
+      [(ngModel)]="courses" 
+      placeholder="Enter comma-separated list of courses (e.g., GGR348H1)"
+      [disabled]="isProcessing"
+    />
+  </div>
+
+  <div class="button-group">
+    <button (click)="processCourses()" [disabled]="isProcessing">
+      {{ isProcessing ? 'Processing...' : 'Submit' }}
+    </button>
+    <button (click)="reset()" [disabled]="isProcessing">Reset</button>
+  </div>
+
+  <div class="results">
+    <h2>Results:</h2>
+    <textarea 
+      readonly 
+      [value]="results"
+      placeholder="Results will appear here..."
+    ></textarea>
+  </div>
+</div>
