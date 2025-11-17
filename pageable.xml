@@ -2,126 +2,30 @@
     <pageableCourse>
         <courses>
             <courses>
-                <id>66193fb80b7d9d3dbe57ec67</id>
-                <name>Neurogenomics</name>
+                <id>67f998c7de40c67f1da33865</id>
+                <name>Carbon-Free Energy Systems</name>
                 <ucName/>
-                <code>HMB360H1</code>
+                <code>GGR348H1</code>
                 <sectionCode>F</sectionCode>
                 <campus>St. George</campus>
                 <sessions>
-                    <sessions>20249</sessions>
+                    <sessions>20259</sessions>
                 </sessions>
                 <sections>
                     <sections>
-                        <name>TUT0103</name>
-                        <type>Tutorial</type>
-                        <teachMethod>TUT</teachMethod>
-                        <sectionNumber>0103</sectionNumber>
-                        <meetingTimes>
-                            <meetingTimes>
-                                <start>
-                                    <day>1</day>
-                                    <millisofday>54000000</millisofday>
-                                </start>
-                                <end>
-                                    <day>1</day>
-                                    <millisofday>57600000</millisofday>
-                                </end>
-                                <building>
-                                    <buildingCode>SS</buildingCode>
-                                    <buildingRoomNumber/>
-                                    <buildingRoomSuffix/>
-                                    <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
-                                    <buildingName/>
-                                </building>
-                                <sessionCode>20249</sessionCode>
-                                <repetition>WEEKLY</repetition>
-                                <repetitionTime>ONCE_A_WEEK</repetitionTime>
-                            </meetingTimes>
-                        </meetingTimes>
-                        <firstMeeting/>
-                        <instructors/>
-                        <currentEnrolment>30</currentEnrolment>
-                        <maxEnrolment>31</maxEnrolment>
-                        <subTitle/>
-                        <cancelInd>N</cancelInd>
-                        <waitlistInd>N</waitlistInd>
-                        <deliveryModes>
-                            <deliveryModes>
-                                <session>20249</session>
-                                <mode>INPER</mode>
-                            </deliveryModes>
-                        </deliveryModes>
-                        <currentWaitlist>0</currentWaitlist>
-                        <enrolmentInd/>
-                        <tbaInd>N</tbaInd>
-                        <openLimitInd>N</openLimitInd>
-                        <notes>
-                            <notes>
-                                <name>Section Note</name>
-                                <type>SECTION</type>
-                                <content/>
-                            </notes>
-                        </notes>
-                        <enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>31</quantity>
-                                <sequence>1</sequence>
-                            </enrolmentControls>
-                        </enrolmentControls>
-                    </sections>
-                    <sections>
-                        <name>LEC0101</name>
+                        <name>LEC5101</name>
                         <type>Lecture</type>
                         <teachMethod>LEC</teachMethod>
-                        <sectionNumber>0101</sectionNumber>
+                        <sectionNumber>5101</sectionNumber>
                         <meetingTimes>
                             <meetingTimes>
                                 <start>
-                                    <day>1</day>
-                                    <millisofday>46800000</millisofday>
+                                    <day>3</day>
+                                    <millisofday>61200000</millisofday>
                                 </start>
                                 <end>
-                                    <day>1</day>
-                                    <millisofday>54000000</millisofday>
+                                    <day>3</day>
+                                    <millisofday>72000000</millisofday>
                                 </end>
                                 <building>
                                     <buildingCode>SS</buildingCode>
@@ -130,7 +34,7 @@
                                     <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
                                     <buildingName/>
                                 </building>
-                                <sessionCode>20249</sessionCode>
+                                <sessionCode>20259</sessionCode>
                                 <repetition>WEEKLY</repetition>
                                 <repetitionTime>ONCE_A_WEEK</repetitionTime>
                             </meetingTimes>
@@ -138,23 +42,23 @@
                         <firstMeeting/>
                         <instructors>
                             <instructors>
-                                <firstName>Alexandra</firstName>
-                                <lastName>Malinowski</lastName>
+                                <firstName>Danny</firstName>
+                                <lastName>Harvey</lastName>
                             </instructors>
                         </instructors>
-                        <currentEnrolment>89</currentEnrolment>
-                        <maxEnrolment>95</maxEnrolment>
+                        <currentEnrolment>13</currentEnrolment>
+                        <maxEnrolment>30</maxEnrolment>
                         <subTitle/>
                         <cancelInd>N</cancelInd>
                         <waitlistInd>Y</waitlistInd>
                         <deliveryModes>
                             <deliveryModes>
-                                <session>20249</session>
+                                <session>20259</session>
                                 <mode>INPER</mode>
                             </deliveryModes>
                         </deliveryModes>
                         <currentWaitlist>0</currentWaitlist>
-                        <enrolmentInd>P*</enrolmentInd>
+                        <enrolmentInd>P</enrolmentInd>
                         <tbaInd>N</tbaInd>
                         <openLimitInd>N</openLimitInd>
                         <notes>
@@ -176,8 +80,8 @@
                                     <name>All</name>
                                 </subject>
                                 <subjectPost>
-                                    <code>ASFOC1540D</code>
-                                    <name>Focus In Genes, Genetics And Biotechnology</name>
+                                    <code/>
+                                    <name/>
                                 </subjectPost>
                                 <typeOfProgram>
                                     <code>*</code>
@@ -188,8 +92,8 @@
                                     <name>All</name>
                                 </designation>
                                 <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
+                                    <code>ARCLA</code>
+                                    <name>John H. Daniels Faculty of Architecture, Landscape, &amp; Design</name>
                                 </primaryOrg>
                                 <associatedOrg>
                                     <code>*</code>
@@ -200,11 +104,11 @@
                                     <name>All</name>
                                 </secondOrg>
                                 <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
+                                    <code>GGR</code>
+                                    <name>Department of Geography and Planning</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
+                                <quantity>30</quantity>
                                 <sequence>1</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
@@ -218,8 +122,8 @@
                                     <name>All</name>
                                 </subject>
                                 <subjectPost>
-                                    <code>ASFOC1540E</code>
-                                    <name>Focus In Neuroscience</name>
+                                    <code/>
+                                    <name/>
                                 </subjectPost>
                                 <typeOfProgram>
                                     <code>*</code>
@@ -230,8 +134,8 @@
                                     <name>All</name>
                                 </designation>
                                 <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
+                                    <code>ARTSC</code>
+                                    <name>Faculty of Arts and Science</name>
                                 </primaryOrg>
                                 <associatedOrg>
                                     <code>*</code>
@@ -242,11 +146,11 @@
                                     <name>All</name>
                                 </secondOrg>
                                 <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
+                                    <code>GGR</code>
+                                    <name>Department of Geography and Planning</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
+                                <quantity>30</quantity>
                                 <sequence>2</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
@@ -260,8 +164,8 @@
                                     <name>All</name>
                                 </subject>
                                 <subjectPost>
-                                    <code>ASFOC2270D</code>
-                                    <name>Focus In Genes, Genetics And Biotechnology</name>
+                                    <code>ASMIN1552</code>
+                                    <name>Environment &amp; Energy Minor</name>
                                 </subjectPost>
                                 <typeOfProgram>
                                     <code>*</code>
@@ -288,22 +192,22 @@
                                     <name>All</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
+                                <quantity>30</quantity>
                                 <sequence>3</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
                                 <yearOfStudy>*</yearOfStudy>
                                 <post>
-                                    <code/>
-                                    <name/>
+                                    <code>AS   NDEGI</code>
+                                    <name>Non-Degree: Incoming Exchange</name>
                                 </post>
                                 <subject>
                                     <code>*</code>
                                     <name>All</name>
                                 </subject>
                                 <subjectPost>
-                                    <code>ASFOC2270E</code>
-                                    <name>Focus In Neuroscience</name>
+                                    <code/>
+                                    <name/>
                                 </subjectPost>
                                 <typeOfProgram>
                                     <code>*</code>
@@ -330,176 +234,8 @@
                                     <name>All</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
+                                <quantity>30</quantity>
                                 <sequence>4</sequence>
-                            </enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code/>
-                                    <name/>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>ASMAJ1050</code>
-                                    <name>Fundamental Genetics and Its Applications Major</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
-                                <sequence>5</sequence>
-                            </enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code/>
-                                    <name/>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>ASMAJ1472</code>
-                                    <name>Neuroscience Major</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
-                                <sequence>6</sequence>
-                            </enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code/>
-                                    <name/>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>ASSPE1050</code>
-                                    <name>Fundamental Genetics and Its Applications Specialist</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
-                                <sequence>7</sequence>
-                            </enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code/>
-                                    <name/>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>ASSPE1472</code>
-                                    <name>Neuroscience Specialist</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
-                                <sequence>8</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
                                 <yearOfStudy>*</yearOfStudy>
@@ -540,8 +276,8 @@
                                     <name>All</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
-                                <sequence>9</sequence>
+                                <quantity>30</quantity>
+                                <sequence>6</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
                                 <yearOfStudy>*</yearOfStudy>
@@ -582,273 +318,81 @@
                                     <name>All</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
+                                <quantity>30</quantity>
+                                <sequence>7</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>30</quantity>
                                 <sequence>10</sequence>
-                            </enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>95</quantity>
-                                <sequence>13</sequence>
-                            </enrolmentControls>
-                        </enrolmentControls>
-                    </sections>
-                    <sections>
-                        <name>TUT0102</name>
-                        <type>Tutorial</type>
-                        <teachMethod>TUT</teachMethod>
-                        <sectionNumber>0102</sectionNumber>
-                        <meetingTimes>
-                            <meetingTimes>
-                                <start>
-                                    <day>1</day>
-                                    <millisofday>54000000</millisofday>
-                                </start>
-                                <end>
-                                    <day>1</day>
-                                    <millisofday>57600000</millisofday>
-                                </end>
-                                <building>
-                                    <buildingCode>SS</buildingCode>
-                                    <buildingRoomNumber/>
-                                    <buildingRoomSuffix/>
-                                    <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
-                                    <buildingName/>
-                                </building>
-                                <sessionCode>20249</sessionCode>
-                                <repetition>WEEKLY</repetition>
-                                <repetitionTime>ONCE_A_WEEK</repetitionTime>
-                            </meetingTimes>
-                        </meetingTimes>
-                        <firstMeeting/>
-                        <instructors/>
-                        <currentEnrolment>30</currentEnrolment>
-                        <maxEnrolment>32</maxEnrolment>
-                        <subTitle/>
-                        <cancelInd>N</cancelInd>
-                        <waitlistInd>N</waitlistInd>
-                        <deliveryModes>
-                            <deliveryModes>
-                                <session>20249</session>
-                                <mode>INPER</mode>
-                            </deliveryModes>
-                        </deliveryModes>
-                        <currentWaitlist>0</currentWaitlist>
-                        <enrolmentInd/>
-                        <tbaInd>N</tbaInd>
-                        <openLimitInd>N</openLimitInd>
-                        <notes>
-                            <notes>
-                                <name>Section Note</name>
-                                <type>SECTION</type>
-                                <content/>
-                            </notes>
-                        </notes>
-                        <enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>32</quantity>
-                                <sequence>1</sequence>
-                            </enrolmentControls>
-                        </enrolmentControls>
-                    </sections>
-                    <sections>
-                        <name>TUT0101</name>
-                        <type>Tutorial</type>
-                        <teachMethod>TUT</teachMethod>
-                        <sectionNumber>0101</sectionNumber>
-                        <meetingTimes>
-                            <meetingTimes>
-                                <start>
-                                    <day>1</day>
-                                    <millisofday>54000000</millisofday>
-                                </start>
-                                <end>
-                                    <day>1</day>
-                                    <millisofday>57600000</millisofday>
-                                </end>
-                                <building>
-                                    <buildingCode>SS</buildingCode>
-                                    <buildingRoomNumber/>
-                                    <buildingRoomSuffix/>
-                                    <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
-                                    <buildingName/>
-                                </building>
-                                <sessionCode>20249</sessionCode>
-                                <repetition>WEEKLY</repetition>
-                                <repetitionTime>ONCE_A_WEEK</repetitionTime>
-                            </meetingTimes>
-                        </meetingTimes>
-                        <firstMeeting/>
-                        <instructors/>
-                        <currentEnrolment>29</currentEnrolment>
-                        <maxEnrolment>32</maxEnrolment>
-                        <subTitle/>
-                        <cancelInd>N</cancelInd>
-                        <waitlistInd>N</waitlistInd>
-                        <deliveryModes>
-                            <deliveryModes>
-                                <session>20249</session>
-                                <mode>INPER</mode>
-                            </deliveryModes>
-                        </deliveryModes>
-                        <currentWaitlist>0</currentWaitlist>
-                        <enrolmentInd/>
-                        <tbaInd>N</tbaInd>
-                        <openLimitInd>N</openLimitInd>
-                        <notes>
-                            <notes>
-                                <name>Section Note</name>
-                                <type>SECTION</type>
-                                <content/>
-                            </notes>
-                        </notes>
-                        <enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>32</quantity>
-                                <sequence>1</sequence>
                             </enrolmentControls>
                         </enrolmentControls>
                     </sections>
                 </sections>
                 <duration/>
                 <cmCourseInfo>
-                    <description>This course covers two main themes: Emerging gene or cell-based therapies to treat neurological disorders and genome engineering tools and techniques to investigate both normal and abnormal brain function. Topics may include cell reprogramming &amp; stem cell technologies, brain organoids &amp; tissue engineering, emerging genome engineering approaches to treat neurodegenerative diseases and behavioural disorders, and optogenetics to probe neural circuit function. Tutorials emphasize critical analysis of primary research.</description>
-                    <title>Neurogenomics</title>
+                    <description>Examines the options available for providing energy from carbon-free energy sources: solar, wind, biomass, nuclear, and fossil fuels with capture and sequestration of CO2. The hydrogen economy is also discussed. Offered alternate years from GGR347H1.</description>
+                    <title>Carbon-Free Energy Systems</title>
                     <levelOfInstruction>undergraduate</levelOfInstruction>
-                    <prerequisitesText>Completion of 9.0 credits including one of HMB265H1/ BIO260H1, and one of HMB200H1/ HMB201H1 </prerequisitesText>
+                    <prerequisitesText>Physics SPH3U</prerequisitesText>
                     <corequisitesText/>
-                    <exclusionsText/>
-                    <recommendedPreparation/>
+                    <exclusionsText>GGR333H1, JGE348H1</exclusionsText>
+                    <recommendedPreparation>8.0 credits including first year Math and/or Physics</recommendedPreparation>
                     <note/>
                     <division>Arts and Science, Faculty of</division>
                     <breadthRequirements>
-                        <breadthRequirements>Living Things and Their Environment (4)</breadthRequirements>
+                        <breadthRequirements>The Physical and Mathematical Universes (5)</breadthRequirements>
                     </breadthRequirements>
                     <distributionRequirements>
                         <distributionRequirements>Science</distributionRequirements>
                     </distributionRequirements>
                     <publicationSections>
-                        <publicationSections>Human Biology</publicationSections>
+                        <publicationSections>Geography and Planning</publicationSections>
                     </publicationSections>
                     <cmPublicationSections>
                         <cmPublicationSections>
-                            <section>Human Biology</section>
+                            <section>Geography and Planning</section>
                         </cmPublicationSections>
                     </cmPublicationSections>
                 </cmCourseInfo>
-                <created>2024-11-08@18:00:33.944</created>
+                <created>2025-11-17@18:05:37.138</created>
                 <modified/>
                 <lastSaved>0</lastSaved>
                 <primaryTeachMethod>LEC</primaryTeachMethod>
@@ -861,13 +405,34 @@
                     <name/>
                 </coSec>
                 <department>
-                    <code>HMB</code>
-                    <name>Human Biology Program</name>
+                    <code>GGR</code>
+                    <name>Department of Geography and Planning</name>
                 </department>
                 <title/>
                 <maxCredit>0.50</maxCredit>
                 <minCredit>0.50</minCredit>
                 <breadths>
+                    <breadths>
+                        <org>
+                            <code>ERIN</code>
+                            <name>University of Toronto Mississauga</name>
+                        </org>
+                        <breadthTypes>
+                            <breadthTypes>
+                                <kind>DISTRIBUTION</kind>
+                                <type>Social Science</type>
+                                <description>Social Science</description>
+                                <code>SSc</code>
+                            </breadthTypes>
+                        </breadthTypes>
+                    </breadths>
+                    <breadths>
+                        <org>
+                            <code>SCAR</code>
+                            <name>University of Toronto Scarborough</name>
+                        </org>
+                        <breadthTypes/>
+                    </breadths>
                     <breadths>
                         <org>
                             <code>ARTSC</code>
@@ -876,9 +441,9 @@
                         <breadthTypes>
                             <breadthTypes>
                                 <kind>BREADTH</kind>
-                                <type>Living Things</type>
-                                <description>BR=4 Living Things and Their Environment</description>
-                                <code>BR=4</code>
+                                <type>Physical Universe</type>
+                                <description>BR=5 The Physical and Mathematical Universes</description>
+                                <code>BR=5</code>
                             </breadthTypes>
                         </breadthTypes>
                     </breadths>
@@ -890,14 +455,14 @@
                         <content/>
                     </notes>
                 </notes>
-                <cancelInd>N</cancelInd>
+                <cancelInd/>
                 <subscriptionTtb>false</subscriptionTtb>
                 <subscriptionOpenData>false</subscriptionOpenData>
                 <tb1Active>false</tb1Active>
                 <tb2Active>false</tb2Active>
-                <primaryWaitlistable>false</primaryWaitlistable>
                 <fullyOnline>false</fullyOnline>
                 <primaryFull>false</primaryFull>
+                <primaryWaitlistable>false</primaryWaitlistable>
             </courses>
         </courses>
         <total>1</total>
@@ -955,6 +520,37 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</ERIN>
+        <SCAR>&lt;p&gt;&lt;b&gt;&lt;span&gt;Terms:&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;F = Fall session course (Sep to Dec)&lt;/span&gt;&lt;br /&gt;&lt;span&gt;S = Winter session course (Jan to Apr)&lt;/span&gt;&lt;br /&gt;&lt;span&gt;Y = Full session course (Sep to Apr)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;span&gt;Building&lt;/span&gt;&lt;/b&gt;&lt;span&gt; &lt;b&gt;Co&lt;/b&gt;&lt;/span&gt;&lt;b&gt;&lt;span&gt;des:&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;AA = Arts Administration&lt;/p&gt;
+&lt;p&gt;AC = Academic Resource Center&lt;/p&gt;
+&lt;p&gt;AQ = Toronto Pan Am Sports Centre&lt;/p&gt;
+&lt;p&gt;BV = Bladen Wing&lt;/p&gt;
+&lt;p&gt;EV = Environmental Sciences Building&lt;/p&gt;
+&lt;p&gt;HL = Highland Hall&lt;/p&gt;
+&lt;p&gt;HW = Humanities Wing&lt;/p&gt;
+&lt;p&gt;IA = Sam Ibrahim Building&lt;/p&gt;
+&lt;p&gt;IC = Instructional Centre&lt;/p&gt;
+&lt;p&gt;KW = &lt;span&gt;Kina Wiiya Enadong Building&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;SW = Science Wing&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;SY = Science Research Building&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Delivery Modes of Classes&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IN PERSON:&lt;span&gt;&amp;nbsp;&lt;/span&gt;This meeting section is in-person. You will be required to attend this meeting section at a specific time and location. The course outline will provide specific details.&lt;/li&gt;
+&lt;li&gt;HYBRID:&lt;span&gt;&amp;nbsp;&lt;/span&gt;This meeting section includes in-person and online activities. You will be required to attend some activities in-person at a specific time and location and some activities online (synchronous or asynchronous). The course outline will provide specific details.&lt;/li&gt;
+&lt;li&gt;ONLINE SYNCHRONOUS:&lt;span&gt;&amp;nbsp;&lt;/span&gt;This meeting section is online and requires attendance at a specific time for class activities. Note: Online courses may require an in-person mid term and final assessment. The course outline will provide specific details.&lt;/li&gt;
+&lt;li&gt;ONLINE ASYNCHRONOUS:&lt;span&gt;&amp;nbsp;&lt;/span&gt;This meeting section is online and does not require attendance at a specific time for class activities. Note: Online courses may require an in-person mid term and final assessment. The course outline will provide specific details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Not all courses listed in the Calendar are offered in each session.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span&gt;Year 1 students (0 - 3.5 credits) will be blocked from registering into most C and D level courses as they do not meet pre-requisite requirements. Please check pre-requisite requirements before registering into courses. Students may be removed from courses that they do not meet the pre-requisite requirements for at any time.&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Please go to &lt;a href="https://www.utsc.utoronto.ca/ability/welcome-accessability-services" target="_blank"&gt;AccessAbility Services&lt;/a&gt; for information about classroom accessibility&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.utsc.utoronto.ca/home/academic-departments-and-programs" target="_blank"&gt;Academic Departments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;The timetable changes constantly. Check regularly for updates.&amp;nbsp;&lt;/h4&gt;</SCAR>
         <ARTSC>&lt;h2&gt;Enrolment Controls&lt;br /&gt;&lt;br /&gt;&lt;/h2&gt;
 &lt;table&gt;&lt;caption&gt;
 &lt;p class="text-left"&gt;&lt;b&gt;Enrolment Controls&lt;/b&gt;&lt;/p&gt;
@@ -1034,7 +630,7 @@ Note: Online courses may require an in-person final assessment. For Y courses, m
     <divisionalEnrolmentIndicators>
         <ARTSC>
             <code>E</code>
-            <name>permission to enrol in this course by contacting the sponsoring department. </name>
+            <name>Enrolment via ACORN is not available. Students must request permission to enrol in this course by contacting the sponsoring department</name>
         </ARTSC>
         <ARTSC>
             <code>R1</code>
@@ -1042,19 +638,19 @@ Note: Online courses may require an in-person final assessment. For Y courses, m
         </ARTSC>
         <ARTSC>
             <code>R1*</code>
-            <name>Restricted: Course/section is restricted at all times for specific students. NOTE: Spaces for each priority group in this course are not equal, and each priority group has its own waitlist until July 24. As of July 26, the waitlists for each priority group merge into one, and your rank on the waitlist may change.</name>
+            <name>Restricted: Course/section is restricted at all times for specific students. NOTE: Spaces for each priority group in this course are not equal, and each priority group has its own waitlist until July 23. As of July 25, the waitlists for each priority group merge into one, and your rank on the waitlist may change.</name>
         </ARTSC>
         <ARTSC>
             <code>P</code>
-            <name>July 26 other Arts &amp; Science students can begin to enrol. Beginning July 31, other St. George campus students can enrol in this section. UTM/UTSC students can enrol in this section starting August 2. Currently the following groups of students can enrol:</name>
+            <name>Priority enrolment is given to certain students until July 23. As of July 25 other Arts &amp; Science students can begin to enrol. Beginning July 30, other St. George campus students can enrol in this section. UTM/UTSC students can enrol in this section starting August 6. Currently the following groups of students can enrol:</name>
         </ARTSC>
         <ARTSC>
             <code>P*</code>
-            <name>Priority: NOTE: Spaces for each priority group in this course are not equal, and each priority group has its own waitlist until July 24. As of July 26, the waitlists for each priority group merge into one, and your rank on the waitlist may change; this is also when other Arts &amp; Science students can begin to enrol. Beginning July 31 other St. George campus students can enrol in this section.  UTM/UTSC students can enrol in this section starting August 2. Currently the following groups of students can enrol:</name>
+            <name>Priority: NOTE: Spaces for each priority group in this course are not equal, and each priority group has its own waitlist until July 23. As of July 25, the waitlists for each priority group merge into one, and your rank on the waitlist may change; this is also when other Arts &amp; Science students can begin to enrol. Beginning July 30 other St. George campus students can enrol in this section.  UTM/UTSC students can enrol in this section starting August 6. Currently the following groups of students can enrol:</name>
         </ARTSC>
         <ARTSC>
             <code>R2</code>
-            <name>This section is restricted to two groups of students. Group 1 is given priority access until July 24. Beginning July 26, Group 2 can enrol in this section. Currently the following groups of students can enrol in this section:</name>
+            <name>This section is restricted to two groups of students. Group 1 is given priority access until July 23. Beginning July 25, Group 2 can enrol in this section. Currently the following groups of students can enrol in this section:</name>
         </ARTSC>
         <ARTSC>
             <code>R2*</code>
@@ -1066,7 +662,7 @@ Note: Online courses may require an in-person final assessment. For Y courses, m
         </ARTSC>
         <ARTSC>
             <code>AP</code>
-            <name>Priority enrolment is given to certain students until July 24. As of July 26 other Arts &amp; Science students can begin to enrol. Beginning July 31, other St. George campus students can enrol in this section. UTM/UTSC students can enrol in this section starting August 2. This section also requires approval for enrolment. The course can be requested on ACORN and will be added with an interim (INT) status which will then either be approved (APP) or refused (REF) by the academic unit. Currently the following groups of students can enrol:</name>
+            <name>Priority enrolment is given to certain students until July 23. As of July 25 other Arts &amp; Science students can begin to enrol. Beginning July 30, other St. George campus students can enrol in this section. UTM/UTSC students can enrol in this section starting August 6. This section also requires approval for enrolment. The course can be requested on ACORN and will be added with an interim (INT) status which will then either be approved (APP) or refused (REF) by the academic unit. Currently the following groups of students can enrol</name>
         </ARTSC>
         <ARTSC>
             <code>AR1</code>
