@@ -2,8 +2,14 @@ export async function onRequest(context) {
 	const { request } = context;
 	const url = new URL(request.url);
 	
+	console.log('=== Function called ===');
+	console.log('Method:', request.method);
+	console.log('URL:', url.href);
+	console.log('Path:', url.pathname);
+	
 	// Handle CORS preflight
 	if (request.method === 'OPTIONS') {
+		console.log('Handling OPTIONS preflight');
 		return new Response(null, {
 			headers: {
 				'Access-Control-Allow-Origin': '*',
@@ -31,10 +37,14 @@ export async function onRequest(context) {
 
 		// Add body for POST/PUT requests
 		if (request.method === 'POST' || request.method === 'PUT') {
+			const contentType = request.headers.get('Content-Type') || '';
 			const body = await request.text();
 			fetchOptions.body = body;
-			fetchOptions.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+			fetchOptions.headers['Content-Type'] = contentType || 'application/json';
+			console.log('=== POST Request ===');
+			console.log('Content-Type:', contentType);
 			console.log('POST body:', body);
+			console.log('POST body length:', body.length);
 		}
 
 		console.log('Fetching:', targetUrl);
