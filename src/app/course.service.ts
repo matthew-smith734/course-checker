@@ -42,7 +42,7 @@ export class CourseService {
    */
   searchCourseTitles(code: string, semester: string): Observable<string> {
     const sanitizedCode = code.replace(/1$/, '');
-    const url = `https://api.easi.utoronto.ca/ttb/getOptimizedMatchingCourseTitles?term=${sanitizedCode}&divisions=ARTSC&sessions=${semester}&lowerThreshold=50&upperThreshold=200`;
+    const url = `/api/ttb/getOptimizedMatchingCourseTitles?term=${sanitizedCode}&divisions=ARTSC&sessions=${semester}&lowerThreshold=50&upperThreshold=200`;
     return this.fetchUrl(url, 'GET');
   }
 
@@ -50,7 +50,7 @@ export class CourseService {
    * Get pageable courses - mirrors Java's second API call
    */
   getPageableCourses(sanitizedCode: string, course: string, semester: string): Observable<string> {
-    const url = 'https://api.easi.utoronto.ca/ttb/getPageableCourses';
+    const url = '/api/ttb/getPageableCourses';
     const postData = JSON.stringify({
       courseCodeAndTitleProps: {
         courseCode: sanitizedCode,

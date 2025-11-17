@@ -1,27 +1,91 @@
-# CourseCheckerApp
+# Course Checker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+An Angular application for checking University of Toronto course availability and enrollment information.
 
-## Development server
+This project was converted from a Java Swing application to a modern Angular web application. It maintains the same functionality and API calls as the original Java version.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Search for UofT courses by semester and course code
+- Display section information including:
+  - Section name
+  - Current enrollment
+  - Maximum enrollment
+- Clean, responsive UI matching the original Java GUI layout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
+
+- Node.js (v20 or higher)
+- npm (v10 or higher)
+
+## Installation
+
+```bash
+npm install
+```
+
+## Development Server
+
+To start the development server with proxy configuration (to handle CORS):
+
+```bash
+npm start
+```
+
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To build the project for production:
 
-## Running unit tests
+```bash
+npm run build
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The build artifacts will be stored in the `dist/course-checker-app/` directory.
 
-## Running end-to-end tests
+## Usage
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Enter the semester code (e.g., `20259` for Winter 2025)
+2. Enter one or more course codes separated by commas (e.g., `GGR348H1`)
+3. Click "Submit" to search for courses
+4. View the results showing section availability
 
-## Further help
+## Testing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Run the application with the following test data:
+- **Semester:** `20259`
+- **Course:** `GGR348H1`
+
+## API Endpoints
+
+The application uses the University of Toronto's EASI API:
+- `GET /ttb/getOptimizedMatchingCourseTitles` - Search for course titles
+- `POST /ttb/getPageableCourses` - Get detailed course section information
+
+## Technical Details
+
+- **Framework:** Angular 18
+- **Language:** TypeScript
+- **XML Parser:** fast-xml-parser
+- **HTTP Client:** Angular HttpClient with RxJS
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── app.component.ts          # Main component with form and results
+│   ├── app.component.html        # Template matching Java GUI layout
+│   ├── app.component.css         # Styles matching Java GUI appearance
+│   ├── course.service.ts         # HTTP service for API calls
+│   └── xml-parser.service.ts     # XML parsing service
+├── index.html
+└── main.ts
+```
+
+## Notes
+
+- The application requires network access to the UofT EASI API
+- A proxy configuration is included for local development to handle CORS
+- The logic and API calls are identical to the original Java implementation

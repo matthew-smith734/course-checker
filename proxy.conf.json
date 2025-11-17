@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://api.easi.utoronto.ca",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
