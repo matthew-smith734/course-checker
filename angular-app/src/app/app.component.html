@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="header">
+    <h1>UofT Course Checker</h1>
+    <p class="subtitle">Check course availability and enrollment</p>
+  </div>
+
+  <div class="form-container">
+    <div class="form-group">
+      <label for="semester">Semester:</label>
+      <input 
+        type="text" 
+        id="semester" 
+        [(ngModel)]="semester" 
+        placeholder="e.g., 20251"
+        [disabled]="isLoading"
+      >
+      <small>Format: YYYYM (e.g., 20251 for 2025 Winter, 20255 for 2025 Summer, 20259 for 2025 Fall)</small>
+    </div>
+
+    <div class="form-group">
+      <label for="courses">Courses:</label>
+      <input 
+        type="text" 
+        id="courses" 
+        [(ngModel)]="courses" 
+        placeholder="e.g., CSC108H1,MAT137Y1"
+        [disabled]="isLoading"
+      >
+      <small>Enter comma-separated course codes (e.g., CSC108H1,MAT137Y1)</small>
+    </div>
+
+    <div class="button-group">
+      <button (click)="onSubmit()" [disabled]="isLoading" class="submit-btn">
+        {{ isLoading ? 'Searching...' : 'Submit' }}
+      </button>
+      <button (click)="onReset()" [disabled]="isLoading" class="reset-btn">
+        Reset
+      </button>
+    </div>
+  </div>
+
+  <div class="results-container" *ngIf="results.length > 0 || isLoading">
+    <h2>Results</h2>
+    
+    <div class="loading" *ngIf="isLoading">
+      <div class="spinner"></div>
+      <p>Searching courses...</p>
+    </div>
+
+    <div *ngIf="!isLoading">
+      <div *ngFor="let result of results" class="result-card">
+        <div class="course-header">
+          <h3>{{ result.courseName }}</h3>
+          <span class="status-badge" [class.found]="result.found" [class.not-found]="!result.found">
+            {{ result.found ? 'Found' : 'Not Found' }}
+          </span>
+        </div>
+
+        <div *ngIf="result.error" class="error-message">
+          {{ result.error }}
+        </div>
+
+        <div *ngIf="result.found && result.sections && result.sections.length > 0" class="sections">
+          <div *ngFor="let section of result.sections" class="section">
+            <div class="section-name">{{ section.name }}</div>
+            <div class="enrollment">
+              <span class="enrollment-label">Enrollment:</span>
+              <span class="enrollment-value">
+                {{ section.currentEnrolment }} / {{ section.maxEnrolment }}
+              </span>
+              <div class="enrollment-bar">
+                <div 
+                  class="enrollment-fill" 
+                  [style.width.%]="(section.currentEnrolment / section.maxEnrolment) * 100"
+                  [class.full]="section.currentEnrolment >= section.maxEnrolment"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="result.found && (!result.sections || result.sections.length === 0)" class="no-sections">
+          No sections available
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
