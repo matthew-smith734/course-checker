@@ -19,17 +19,20 @@ export class CourseService {
   }
 
   searchCourse(semester: string, courseCode: string): Observable<CourseSearchResult> {
-    if (courseCode.length < 4) {
+    // Sanitize input to remove any invisible Unicode characters
+    const cleanCourseCode = courseCode.replace(/[\s\u200B\u200C\u200D\u200E\u200F\uFEFF]/g, '').toUpperCase();
+    
+    if (cleanCourseCode.length < 4) {
       return of({
         found: false,
-        courseName: courseCode,
+        courseName: cleanCourseCode,
         error: 'Invalid course format'
       });
     }
 
-    const code = courseCode.substring(0, 4);
+    const code = cleanCourseCode.substring(0, 4);
     const sanitizedCode = code.replace(/1$/, '');
-    const title = courseCode.substring(4);
+    const title = cleanCourseCode.substring(4);
 
     // First API call to check if course exists
     const searchUrl = `${this.API_BASE}/getOptimizedMatchingCourseTitles?term=${sanitizedCode}&divisions=ARTSC&sessions=${semester}&lowerThreshold=50&upperThreshold=200`;
@@ -37,21 +40,21 @@ export class CourseService {
     return this.http.get(searchUrl, { responseType: 'text' }).pipe(
       switchMap(response => {
         if (response.includes(title)) {
-          // Course found, get details - use FULL course code, not sanitized
-          return this.getCourseDetails(courseCode, courseCode, semester);
+          // Course found, get details - use cleaned full course code
+          return this.getCourseDetails(cleanCourseCode, cleanCourseCode, semester);
         } else {
           return of({
             found: false,
-            courseName: courseCode,
+            courseName: cleanCourseCode,
             error: 'Course not found'
           });
         }
       }),
       catchError(error => {
-        console.error('Error searching course:', courseCode, error.status, error.message);
+        console.error('Error searching course:', cleanCourseCode, error.status, error.message);
         return of({
           found: false,
-          courseName: courseCode,
+          courseName: cleanCourseCode,
           error: `Error searching course: ${error.status || error.message || 'Unknown error'}`
         });
       })

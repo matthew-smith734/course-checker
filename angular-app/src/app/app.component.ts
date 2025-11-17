@@ -30,10 +30,13 @@ export class AppComponent {
     this.results = [];
 
     // Clean the input by removing all Unicode whitespace and invisible characters
-    // \s matches all whitespace, \u200B is zero-width space, \uFEFF is BOM
-    const cleanedCourses = this.courses.replace(/[\s\u200B\u200C\u200D\uFEFF]/g, ' ');
-    const courseList = cleanedCourses.split(',')
-      .map(c => c.trim().replace(/[^\w]/g, ''))  // Remove any remaining non-word characters
+    // Split by comma first, then aggressively clean each course code
+    const courseList = this.courses.split(',')
+      .map(c => c
+        .replace(/[\s\u200B\u200C\u200D\u200E\u200F\uFEFF]/g, '')  // Remove all whitespace and invisible chars
+        .replace(/[^A-Za-z0-9]/g, '')  // Keep only alphanumeric
+        .toUpperCase()
+      )
       .filter(c => c.length > 0);
 
     console.log('Original input:', this.courses);
