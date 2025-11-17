@@ -2,10 +2,10 @@
     <pageableCourse>
         <courses>
             <courses>
-                <id>67f998c7de40c67f1da33865</id>
-                <name>Carbon-Free Energy Systems</name>
+                <id>67f998c7de40c67f1da33856</id>
+                <name>Environmental Remote Sensing</name>
                 <ucName/>
-                <code>GGR348H1</code>
+                <code>GGR315H1</code>
                 <sectionCode>F</sectionCode>
                 <campus>St. George</campus>
                 <sessions>
@@ -13,19 +13,115 @@
                 </sessions>
                 <sections>
                     <sections>
-                        <name>LEC5101</name>
-                        <type>Lecture</type>
-                        <teachMethod>LEC</teachMethod>
-                        <sectionNumber>5101</sectionNumber>
+                        <name>PRA0101</name>
+                        <type>Practical</type>
+                        <teachMethod>PRA</teachMethod>
+                        <sectionNumber>0101</sectionNumber>
                         <meetingTimes>
                             <meetingTimes>
                                 <start>
-                                    <day>3</day>
-                                    <millisofday>61200000</millisofday>
+                                    <day>1</day>
+                                    <millisofday>54000000</millisofday>
                                 </start>
                                 <end>
-                                    <day>3</day>
-                                    <millisofday>72000000</millisofday>
+                                    <day>1</day>
+                                    <millisofday>61200000</millisofday>
+                                </end>
+                                <building>
+                                    <buildingCode>SS</buildingCode>
+                                    <buildingRoomNumber/>
+                                    <buildingRoomSuffix/>
+                                    <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
+                                    <buildingName/>
+                                </building>
+                                <sessionCode>20259</sessionCode>
+                                <repetition>WEEKLY</repetition>
+                                <repetitionTime>ONCE_A_WEEK</repetitionTime>
+                            </meetingTimes>
+                        </meetingTimes>
+                        <firstMeeting/>
+                        <instructors/>
+                        <currentEnrolment>25</currentEnrolment>
+                        <maxEnrolment>30</maxEnrolment>
+                        <subTitle/>
+                        <cancelInd>N</cancelInd>
+                        <waitlistInd>N</waitlistInd>
+                        <deliveryModes>
+                            <deliveryModes>
+                                <session>20259</session>
+                                <mode>INPER</mode>
+                            </deliveryModes>
+                        </deliveryModes>
+                        <currentWaitlist>0</currentWaitlist>
+                        <enrolmentInd/>
+                        <tbaInd>N</tbaInd>
+                        <openLimitInd>N</openLimitInd>
+                        <notes>
+                            <notes>
+                                <name>Section Note</name>
+                                <type>SECTION</type>
+                                <content/>
+                            </notes>
+                        </notes>
+                        <enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>30</quantity>
+                                <sequence>1</sequence>
+                            </enrolmentControls>
+                        </enrolmentControls>
+                    </sections>
+                    <sections>
+                        <name>LEC0101</name>
+                        <type>Lecture</type>
+                        <teachMethod>LEC</teachMethod>
+                        <sectionNumber>0101</sectionNumber>
+                        <meetingTimes>
+                            <meetingTimes>
+                                <start>
+                                    <day>1</day>
+                                    <millisofday>39600000</millisofday>
+                                </start>
+                                <end>
+                                    <day>1</day>
+                                    <millisofday>46800000</millisofday>
                                 </end>
                                 <building>
                                     <buildingCode>SS</buildingCode>
@@ -42,12 +138,12 @@
                         <firstMeeting/>
                         <instructors>
                             <instructors>
-                                <firstName>Danny</firstName>
-                                <lastName>Harvey</lastName>
+                                <firstName>Jing</firstName>
+                                <lastName>Chen</lastName>
                             </instructors>
                         </instructors>
-                        <currentEnrolment>13</currentEnrolment>
-                        <maxEnrolment>30</maxEnrolment>
+                        <currentEnrolment>46</currentEnrolment>
+                        <maxEnrolment>60</maxEnrolment>
                         <subTitle/>
                         <cancelInd>N</cancelInd>
                         <waitlistInd>Y</waitlistInd>
@@ -108,7 +204,7 @@
                                     <name>Department of Geography and Planning</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>30</quantity>
+                                <quantity>60</quantity>
                                 <sequence>1</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
@@ -150,92 +246,8 @@
                                     <name>Department of Geography and Planning</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>30</quantity>
+                                <quantity>60</quantity>
                                 <sequence>2</sequence>
-                            </enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code/>
-                                    <name/>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code>ASMIN1552</code>
-                                    <name>Environment &amp; Energy Minor</name>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>30</quantity>
-                                <sequence>3</sequence>
-                            </enrolmentControls>
-                            <enrolmentControls>
-                                <yearOfStudy>*</yearOfStudy>
-                                <post>
-                                    <code>AS   NDEGI</code>
-                                    <name>Non-Degree: Incoming Exchange</name>
-                                </post>
-                                <subject>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </subject>
-                                <subjectPost>
-                                    <code/>
-                                    <name/>
-                                </subjectPost>
-                                <typeOfProgram>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </typeOfProgram>
-                                <designation>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </designation>
-                                <primaryOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </primaryOrg>
-                                <associatedOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </associatedOrg>
-                                <secondOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </secondOrg>
-                                <adminOrg>
-                                    <code>*</code>
-                                    <name>All</name>
-                                </adminOrg>
-                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>30</quantity>
-                                <sequence>4</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
                                 <yearOfStudy>*</yearOfStudy>
@@ -276,8 +288,8 @@
                                     <name>All</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>30</quantity>
-                                <sequence>6</sequence>
+                                <quantity>60</quantity>
+                                <sequence>3</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
                                 <yearOfStudy>*</yearOfStudy>
@@ -318,8 +330,8 @@
                                     <name>All</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
-                                <quantity>30</quantity>
-                                <sequence>7</sequence>
+                                <quantity>60</quantity>
+                                <sequence>4</sequence>
                             </enrolmentControls>
                             <enrolmentControls>
                                 <yearOfStudy>*</yearOfStudy>
@@ -360,21 +372,117 @@
                                     <name>All</name>
                                 </adminOrg>
                                 <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>60</quantity>
+                                <sequence>7</sequence>
+                            </enrolmentControls>
+                        </enrolmentControls>
+                    </sections>
+                    <sections>
+                        <name>PRA0201</name>
+                        <type>Practical</type>
+                        <teachMethod>PRA</teachMethod>
+                        <sectionNumber>0201</sectionNumber>
+                        <meetingTimes>
+                            <meetingTimes>
+                                <start>
+                                    <day>1</day>
+                                    <millisofday>61200000</millisofday>
+                                </start>
+                                <end>
+                                    <day>1</day>
+                                    <millisofday>68400000</millisofday>
+                                </end>
+                                <building>
+                                    <buildingCode>SS</buildingCode>
+                                    <buildingRoomNumber/>
+                                    <buildingRoomSuffix/>
+                                    <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
+                                    <buildingName/>
+                                </building>
+                                <sessionCode>20259</sessionCode>
+                                <repetition>WEEKLY</repetition>
+                                <repetitionTime>ONCE_A_WEEK</repetitionTime>
+                            </meetingTimes>
+                        </meetingTimes>
+                        <firstMeeting/>
+                        <instructors/>
+                        <currentEnrolment>21</currentEnrolment>
+                        <maxEnrolment>30</maxEnrolment>
+                        <subTitle/>
+                        <cancelInd>N</cancelInd>
+                        <waitlistInd>N</waitlistInd>
+                        <deliveryModes>
+                            <deliveryModes>
+                                <session>20259</session>
+                                <mode>INPER</mode>
+                            </deliveryModes>
+                        </deliveryModes>
+                        <currentWaitlist>0</currentWaitlist>
+                        <enrolmentInd/>
+                        <tbaInd>N</tbaInd>
+                        <openLimitInd>N</openLimitInd>
+                        <notes>
+                            <notes>
+                                <name>Section Note</name>
+                                <type>SECTION</type>
+                                <content/>
+                            </notes>
+                        </notes>
+                        <enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
                                 <quantity>30</quantity>
-                                <sequence>10</sequence>
+                                <sequence>1</sequence>
                             </enrolmentControls>
                         </enrolmentControls>
                     </sections>
                 </sections>
                 <duration/>
                 <cmCourseInfo>
-                    <description>Examines the options available for providing energy from carbon-free energy sources: solar, wind, biomass, nuclear, and fossil fuels with capture and sequestration of CO2. The hydrogen economy is also discussed. Offered alternate years from GGR347H1.</description>
-                    <title>Carbon-Free Energy Systems</title>
+                    <description>Principles of optical, active and passive microwave remote sensing; satellite orbit and sensor characteristics; image processing and analysis techniques and software; and environmental remote sensing applications.</description>
+                    <title>Environmental Remote Sensing</title>
                     <levelOfInstruction>undergraduate</levelOfInstruction>
-                    <prerequisitesText>Physics SPH3U</prerequisitesText>
+                    <prerequisitesText/>
                     <corequisitesText/>
-                    <exclusionsText>GGR333H1, JGE348H1</exclusionsText>
-                    <recommendedPreparation>8.0 credits including first year Math and/or Physics</recommendedPreparation>
+                    <exclusionsText>&lt;p&gt;GGR337H1, GGR337H5&lt;/p&gt;</exclusionsText>
+                    <recommendedPreparation>8.0 credits, JEG100H1/GGR100H1, GGR272H1</recommendedPreparation>
                     <note/>
                     <division>Arts and Science, Faculty of</division>
                     <breadthRequirements>
@@ -392,7 +500,7 @@
                         </cmPublicationSections>
                     </cmPublicationSections>
                 </cmCourseInfo>
-                <created>2025-11-17@18:05:37.138</created>
+                <created>2025-11-17@19:18:07.725</created>
                 <modified/>
                 <lastSaved>0</lastSaved>
                 <primaryTeachMethod>LEC</primaryTeachMethod>
@@ -455,17 +563,674 @@
                         <content/>
                     </notes>
                 </notes>
-                <cancelInd/>
+                <cancelInd>N</cancelInd>
                 <subscriptionTtb>false</subscriptionTtb>
                 <subscriptionOpenData>false</subscriptionOpenData>
                 <tb1Active>false</tb1Active>
                 <tb2Active>false</tb2Active>
-                <fullyOnline>false</fullyOnline>
                 <primaryFull>false</primaryFull>
+                <fullyOnline>false</fullyOnline>
+                <primaryWaitlistable>false</primaryWaitlistable>
+            </courses>
+            <courses>
+                <id>67f998c7de40c67f1da33874</id>
+                <name>Advanced Remote Sensing</name>
+                <ucName/>
+                <code>GGR415H1</code>
+                <sectionCode>F</sectionCode>
+                <campus>St. George</campus>
+                <sessions>
+                    <sessions>20259</sessions>
+                </sessions>
+                <sections>
+                    <sections>
+                        <name>PRA5101</name>
+                        <type>Practical</type>
+                        <teachMethod>PRA</teachMethod>
+                        <sectionNumber>5101</sectionNumber>
+                        <meetingTimes>
+                            <meetingTimes>
+                                <start>
+                                    <day>3</day>
+                                    <millisofday>61200000</millisofday>
+                                </start>
+                                <end>
+                                    <day>3</day>
+                                    <millisofday>68400000</millisofday>
+                                </end>
+                                <building>
+                                    <buildingCode>SS</buildingCode>
+                                    <buildingRoomNumber/>
+                                    <buildingRoomSuffix/>
+                                    <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
+                                    <buildingName/>
+                                </building>
+                                <sessionCode>20259</sessionCode>
+                                <repetition>WEEKLY</repetition>
+                                <repetitionTime>ONCE_A_WEEK</repetitionTime>
+                            </meetingTimes>
+                        </meetingTimes>
+                        <firstMeeting/>
+                        <instructors/>
+                        <currentEnrolment>7</currentEnrolment>
+                        <maxEnrolment>20</maxEnrolment>
+                        <subTitle/>
+                        <cancelInd>N</cancelInd>
+                        <waitlistInd>N</waitlistInd>
+                        <deliveryModes>
+                            <deliveryModes>
+                                <session>20259</session>
+                                <mode>INPER</mode>
+                            </deliveryModes>
+                        </deliveryModes>
+                        <currentWaitlist>0</currentWaitlist>
+                        <enrolmentInd/>
+                        <tbaInd>N</tbaInd>
+                        <openLimitInd>N</openLimitInd>
+                        <notes>
+                            <notes>
+                                <name>Section Note</name>
+                                <type>SECTION</type>
+                                <content/>
+                            </notes>
+                        </notes>
+                        <enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>1</sequence>
+                            </enrolmentControls>
+                        </enrolmentControls>
+                    </sections>
+                    <sections>
+                        <name>LEC5101</name>
+                        <type>Lecture</type>
+                        <teachMethod>LEC</teachMethod>
+                        <sectionNumber>5101</sectionNumber>
+                        <meetingTimes>
+                            <meetingTimes>
+                                <start>
+                                    <day>2</day>
+                                    <millisofday>61200000</millisofday>
+                                </start>
+                                <end>
+                                    <day>2</day>
+                                    <millisofday>68400000</millisofday>
+                                </end>
+                                <building>
+                                    <buildingCode>SS</buildingCode>
+                                    <buildingRoomNumber/>
+                                    <buildingRoomSuffix/>
+                                    <buildingUrl>https://map.utoronto.ca/?id=1809#!m/494510</buildingUrl>
+                                    <buildingName/>
+                                </building>
+                                <sessionCode>20259</sessionCode>
+                                <repetition>WEEKLY</repetition>
+                                <repetitionTime>ONCE_A_WEEK</repetitionTime>
+                            </meetingTimes>
+                        </meetingTimes>
+                        <firstMeeting/>
+                        <instructors>
+                            <instructors>
+                                <firstName>Jane</firstName>
+                                <lastName>Liu</lastName>
+                            </instructors>
+                        </instructors>
+                        <currentEnrolment>8</currentEnrolment>
+                        <maxEnrolment>20</maxEnrolment>
+                        <subTitle/>
+                        <cancelInd>N</cancelInd>
+                        <waitlistInd>Y</waitlistInd>
+                        <deliveryModes>
+                            <deliveryModes>
+                                <session>20259</session>
+                                <mode>INPER</mode>
+                            </deliveryModes>
+                        </deliveryModes>
+                        <currentWaitlist>0</currentWaitlist>
+                        <enrolmentInd>P</enrolmentInd>
+                        <tbaInd>N</tbaInd>
+                        <openLimitInd>N</openLimitInd>
+                        <notes>
+                            <notes>
+                                <name>Section Note</name>
+                                <type>SECTION</type>
+                                <content/>
+                            </notes>
+                        </notes>
+                        <enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>GGR</code>
+                                    <name>GEOGRAPHY</name>
+                                </subject>
+                                <subjectPost>
+                                    <code/>
+                                    <name/>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>MAJ</code>
+                                    <name>Major</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>ARCLA</code>
+                                    <name>John H. Daniels Faculty of Architecture, Landscape, &amp; Design</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>1</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>GGR</code>
+                                    <name>GEOGRAPHY</name>
+                                </subject>
+                                <subjectPost>
+                                    <code/>
+                                    <name/>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>MAJ</code>
+                                    <name>Major</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>ARTSC</code>
+                                    <name>Faculty of Arts and Science</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>2</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>GGR</code>
+                                    <name>GEOGRAPHY</name>
+                                </subject>
+                                <subjectPost>
+                                    <code/>
+                                    <name/>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>SPE</code>
+                                    <name>Specialist</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>ARCLA</code>
+                                    <name>John H. Daniels Faculty of Architecture, Landscape, &amp; Design</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>3</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>GGR</code>
+                                    <name>GEOGRAPHY</name>
+                                </subject>
+                                <subjectPost>
+                                    <code/>
+                                    <name/>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>SPE</code>
+                                    <name>Specialist</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>ARTSC</code>
+                                    <name>Faculty of Arts and Science</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>4</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code>ASMIN0305</code>
+                                    <name>Geographic Information Systems Minor</name>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>5</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code>ASMIN2030</code>
+                                    <name>Physical &amp; Environmental Geography Minor</name>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>6</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code/>
+                                    <name/>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>ARTSC</code>
+                                    <name>Faculty of Arts and Science</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>7</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code/>
+                                    <name/>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code/>
+                                    <name/>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>ARCLA</code>
+                                    <name>John H. Daniels Faculty of Architecture, Landscape, &amp; Design</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>8</sequence>
+                            </enrolmentControls>
+                            <enrolmentControls>
+                                <yearOfStudy>*</yearOfStudy>
+                                <post>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </post>
+                                <subject>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subject>
+                                <subjectPost>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </subjectPost>
+                                <typeOfProgram>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </typeOfProgram>
+                                <designation>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </designation>
+                                <primaryOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </primaryOrg>
+                                <associatedOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </associatedOrg>
+                                <secondOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </secondOrg>
+                                <adminOrg>
+                                    <code>*</code>
+                                    <name>All</name>
+                                </adminOrg>
+                                <collaborativeOrgGroupCode>*</collaborativeOrgGroupCode>
+                                <quantity>20</quantity>
+                                <sequence>11</sequence>
+                            </enrolmentControls>
+                        </enrolmentControls>
+                    </sections>
+                </sections>
+                <duration/>
+                <cmCourseInfo>
+                    <description>Building on GGR315H1 (formerly GGR337H1) Environmental Remote Sensing with advanced theories and techniques for land cover mapping, vegetation biophysical and biochemical parameter retrievals, optical and thermal remote sensing of urban environment, and application of satellite remote sensing to terrestrial water and carbon cycle estimation. Basic radiative transfer theories as applied to vegetation will be given in some detail as the basis for various remote sensing applications. Optical instruments for measuring vegetation structural parameters will be demonstrated in the field.</description>
+                    <title>Advanced Remote Sensing</title>
+                    <levelOfInstruction>undergraduate</levelOfInstruction>
+                    <prerequisitesText>&lt;p&gt;10.0 credits including GGR315H1/GGR337H1&lt;/p&gt;</prerequisitesText>
+                    <corequisitesText/>
+                    <exclusionsText>&lt;p&gt;GGR414H1&lt;/p&gt;</exclusionsText>
+                    <recommendedPreparation>GGR272H1, GGR273H1, GGR373H1</recommendedPreparation>
+                    <note/>
+                    <division>Arts and Science, Faculty of</division>
+                    <breadthRequirements>
+                        <breadthRequirements>The Physical and Mathematical Universes (5)</breadthRequirements>
+                    </breadthRequirements>
+                    <distributionRequirements>
+                        <distributionRequirements>Science</distributionRequirements>
+                    </distributionRequirements>
+                    <publicationSections>
+                        <publicationSections>Geography and Planning</publicationSections>
+                    </publicationSections>
+                    <cmPublicationSections>
+                        <cmPublicationSections>
+                            <section>Geography and Planning</section>
+                        </cmPublicationSections>
+                    </cmPublicationSections>
+                </cmCourseInfo>
+                <created>2025-11-17@19:18:07.726</created>
+                <modified/>
+                <lastSaved>0</lastSaved>
+                <primaryTeachMethod>LEC</primaryTeachMethod>
+                <faculty>
+                    <code>ARTSC</code>
+                    <name>Faculty of Arts and Science</name>
+                </faculty>
+                <coSec>
+                    <code/>
+                    <name/>
+                </coSec>
+                <department>
+                    <code>GGR</code>
+                    <name>Department of Geography and Planning</name>
+                </department>
+                <title/>
+                <maxCredit>0.50</maxCredit>
+                <minCredit>0.50</minCredit>
+                <breadths>
+                    <breadths>
+                        <org>
+                            <code>APSC</code>
+                            <name>Faculty of Applied Science &amp; Engineering</name>
+                        </org>
+                        <breadthTypes>
+                            <breadthTypes>
+                                <kind>ELECTIVE</kind>
+                                <type>Compl Studies</type>
+                                <description>Complementary Studies</description>
+                                <code>CS</code>
+                            </breadthTypes>
+                        </breadthTypes>
+                    </breadths>
+                    <breadths>
+                        <org>
+                            <code>ERIN</code>
+                            <name>University of Toronto Mississauga</name>
+                        </org>
+                        <breadthTypes>
+                            <breadthTypes>
+                                <kind>DISTRIBUTION</kind>
+                                <type>Social Science</type>
+                                <description>Social Science</description>
+                                <code>SSc</code>
+                            </breadthTypes>
+                        </breadthTypes>
+                    </breadths>
+                    <breadths>
+                        <org>
+                            <code>SCAR</code>
+                            <name>University of Toronto Scarborough</name>
+                        </org>
+                        <breadthTypes/>
+                    </breadths>
+                    <breadths>
+                        <org>
+                            <code>ARTSC</code>
+                            <name>Faculty of Arts and Science</name>
+                        </org>
+                        <breadthTypes>
+                            <breadthTypes>
+                                <kind>BREADTH</kind>
+                                <type>Physical Universe</type>
+                                <description>BR=5 The Physical and Mathematical Universes</description>
+                                <code>BR=5</code>
+                            </breadthTypes>
+                        </breadthTypes>
+                    </breadths>
+                </breadths>
+                <notes>
+                    <notes>
+                        <name>Course Note</name>
+                        <type>COURSE</type>
+                        <content/>
+                    </notes>
+                </notes>
+                <cancelInd>N</cancelInd>
+                <subscriptionTtb>false</subscriptionTtb>
+                <subscriptionOpenData>false</subscriptionOpenData>
+                <tb1Active>false</tb1Active>
+                <tb2Active>false</tb2Active>
+                <primaryFull>false</primaryFull>
+                <fullyOnline>false</fullyOnline>
                 <primaryWaitlistable>false</primaryWaitlistable>
             </courses>
         </courses>
-        <total>1</total>
+        <total>2</total>
         <page>1</page>
         <pageSize>20</pageSize>
         <direction/>

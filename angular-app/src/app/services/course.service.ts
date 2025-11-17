@@ -143,28 +143,32 @@ export class CourseService {
       for (let i = 0; i < coursesElements.length; i++) {
         const courseElement = coursesElements[i];
         
-        // First, get the parent <sections> container
-        const sectionsContainers = courseElement.getElementsByTagName('sections');
+        // Get the <sections> container - it's a direct child of <courses>
+        let sectionsContainer = null;
+        for (let k = 0; k < courseElement.children.length; k++) {
+          if (courseElement.children[k].tagName === 'sections') {
+            sectionsContainer = courseElement.children[k];
+            break;
+          }
+        }
         
-        if (sectionsContainers.length > 0) {
-          const sectionsContainer = sectionsContainers[0];
-          
-          // Now get all <sections> elements inside the container (like Java does)
-          const nestedSections = sectionsContainer.getElementsByTagName('sections');
-          
-          for (let j = 0; j < nestedSections.length; j++) {
-            const sectionElement = nestedSections[j];
+        if (sectionsContainer) {
+          // Get direct children <sections> elements (the actual section items)
+          for (let j = 0; j < sectionsContainer.children.length; j++) {
+            const sectionElement = sectionsContainer.children[j];
             
-            const nameElement = sectionElement.getElementsByTagName('name')[0];
-            const currentEnrolmentElement = sectionElement.getElementsByTagName('currentEnrolment')[0];
-            const maxEnrolmentElement = sectionElement.getElementsByTagName('maxEnrolment')[0];
-            
-            if (nameElement && currentEnrolmentElement && maxEnrolmentElement) {
-              sections.push({
-                name: nameElement.textContent || '',
-                currentEnrolment: parseInt(currentEnrolmentElement.textContent || '0'),
-                maxEnrolment: parseInt(maxEnrolmentElement.textContent || '0')
-              });
+            if (sectionElement.tagName === 'sections') {
+              const nameElement = sectionElement.getElementsByTagName('name')[0];
+              const currentEnrolmentElement = sectionElement.getElementsByTagName('currentEnrolment')[0];
+              const maxEnrolmentElement = sectionElement.getElementsByTagName('maxEnrolment')[0];
+              
+              if (nameElement && currentEnrolmentElement && maxEnrolmentElement) {
+                sections.push({
+                  name: nameElement.textContent || '',
+                  currentEnrolment: parseInt(currentEnrolmentElement.textContent || '0'),
+                  maxEnrolment: parseInt(maxEnrolmentElement.textContent || '0')
+                });
+              }
             }
           }
         }
@@ -172,6 +176,9 @@ export class CourseService {
     } catch (error) {
       console.error('Error parsing XML:', error);
     }
+    
+    // Sort sections alphabetically by name
+    sections.sort((a, b) => a.name.localeCompare(b.name));
     
     return sections;
   }
