@@ -9,10 +9,10 @@ import { isDevMode } from '@angular/core';
   providedIn: 'root'
 })
 export class CourseService {
-  // Use standalone proxy server in development
+  // Use standalone proxy server in development, Cloudflare Worker in production
   private readonly API_BASE = isDevMode() 
     ? 'http://localhost:3000/ttb'  // Standalone Node.js proxy server
-    : 'https://api.easi.utoronto.ca/ttb';
+    : '/api';  // Cloudflare Worker proxy
 
   constructor(private http: HttpClient) {
     console.log('CourseService initialized. API_BASE:', this.API_BASE, 'DevMode:', isDevMode());
