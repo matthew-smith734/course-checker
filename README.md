@@ -55,16 +55,12 @@ Command-line scripts for quick checks.
 
 #### Running the Application
 
-**GUI Mode:**
+**GUI Mode (default):**
 ```bash
 java -jar CourseChecker.jar
 ```
 
-**Headless Mode:**
-```bash
-java -jar CourseChecker.jar
-# Follow the prompts to enter semester and courses
-```
+**Note:** The application automatically detects if a graphical environment is available. In headless environments (e.g., SSH sessions, servers), it will automatically switch to command-line mode with interactive prompts for semester and course input.
 
 #### Using the Pre-built Executable (Windows)
 ```cmd
@@ -109,7 +105,7 @@ Courses should be specified with their full code, including the title portion:
 
 Examples:
 - `CSC108H1` - Introduction to Computer Programming
-- `MAT137Y1` - Calculus!
+- `MAT137Y1` - Calculus! (yes, the exclamation is part of the official name)
 - `PHY151H1` - Foundations of Physics I
 
 For the Java application and scripts, you can provide multiple courses:
