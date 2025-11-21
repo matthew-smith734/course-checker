@@ -105,7 +105,7 @@ Courses should be specified with their full code, including the title portion:
 
 Examples:
 - `CSC108H1` - Introduction to Computer Programming
-- `MAT137Y1` - Calculus! (yes, the exclamation is part of the official name)
+- `MAT137Y1` - Calculus! (note: the exclamation mark is part of the official course name)
 - `PHY151H1` - Foundations of Physics I
 
 For the Java application and scripts, you can provide multiple courses:
@@ -160,8 +160,8 @@ course-checker/
 This tool uses the University of Toronto's EASI (Enterprise Academic System Integration) API:
 - Base URL: `https://api.easi.utoronto.ca/ttb/`
 - Endpoints used:
-  - `getOptimizedMatchingCourseTitles` - Search for courses
-  - `getPageableCourses` - Get detailed course information
+  - `https://api.easi.utoronto.ca/ttb/getOptimizedMatchingCourseTitles` - Search for courses
+  - `https://api.easi.utoronto.ca/ttb/getPageableCourses` - Get detailed course information
 
 ## Output
 
