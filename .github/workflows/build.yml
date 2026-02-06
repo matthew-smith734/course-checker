@@ -49,6 +49,7 @@ jobs:
 
   build:
     name: Compile and Build
+    needs: [version]
     if: github.ref != 'refs/heads/main' || needs.version.result == 'success'
     runs-on: ubuntu-latest
     steps:
