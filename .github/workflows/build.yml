@@ -13,7 +13,7 @@ jobs:
   version:
     name: Bump version from commits
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -49,8 +49,8 @@ jobs:
 
   build:
     name: Compile and Build
-    needs: version
-    if: github.event_name != 'push' || !contains(github.event.head_commit.message, 'chore(release):')
+    needs: [version]
+    if: github.ref != 'refs/heads/main' || needs.version.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -82,9 +82,7 @@ jobs:
     name: Build and Publish Docker image
     needs: [build]
     if: |
-      github.event_name == 'push' &&
-      !contains(github.event.head_commit.message, '[skip ci]') &&
-      !contains(github.event.head_commit.message, 'chore(release):')
+      github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip ci]')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
