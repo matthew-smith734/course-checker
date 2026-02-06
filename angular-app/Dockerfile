@@ -1,6 +1,10 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
+# allow Docker builds to inject the sha-tagged version that the workflow already calculated
+ARG COURSE_CHECKER_VERSION
+ENV COURSE_CHECKER_VERSION=${COURSE_CHECKER_VERSION:-}
+
 # install dependencies before compiling
 COPY package*.json ./
 RUN npm install
