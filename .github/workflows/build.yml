@@ -33,7 +33,7 @@ jobs:
   docker:
     name: Build and Publish Docker image
     needs: build
-    if: github.event_name == 'push' && contains(github.event.head_commit.message, 'chore(release):')
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, 'release')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
