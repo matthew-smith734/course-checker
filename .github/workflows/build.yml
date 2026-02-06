@@ -10,12 +10,60 @@ on:
     branches: [main]
 
 jobs:
+  version:
+    name: Bump version from commits
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Configure Git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Angular dependencies
+        run: npm ci
+        working-directory: angular-app
+
+      - name: Create release commit
+        run: npm run release
+        working-directory: angular-app
+
+      - name: Push release changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git push --follow-tags origin main
+          else
+            echo "No release-worthy commits"
+          fi
+
   build:
     name: Compile and Build
+    needs: version
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, 'chore(release):')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Refresh release commit
+        if: needs.version.result == 'success'
+        run: |
+          git fetch origin main
+          git checkout --force origin/main
+          git reset --hard origin/main
 
       - name: Set up Node 20
         uses: actions/setup-node@v4
@@ -32,8 +80,11 @@ jobs:
 
   docker:
     name: Build and Publish Docker image
-    needs: build
-    if: github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip ci]')
+    needs: [build]
+    if: |
+      github.event_name == 'push' &&
+      !contains(github.event.head_commit.message, '[skip ci]') &&
+      !contains(github.event.head_commit.message, 'chore(release):')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
