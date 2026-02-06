@@ -60,6 +60,8 @@ jobs:
     needs: [version]
     if: github.ref != 'refs/heads/main' || needs.version.result == 'success'
     runs-on: ubuntu-latest
+    outputs:
+      app_version: ${{ steps.determine_build_version.outputs.version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -78,6 +80,20 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Determine build version
+        id: determine_build_version
+        run: |
+          set -euo pipefail
+
+          VERSION=$(node -p "require('./angular-app/package.json').version")
+          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+            SHORT_SHA=$(git rev-parse --short HEAD)
+            VERSION="${VERSION}-${SHORT_SHA}"
+          fi
+
+          echo "COURSE_CHECKER_VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
       - name: Install Angular dependencies
         run: npm ci
         working-directory: angular-app
@@ -92,6 +108,8 @@ jobs:
     if: |
       github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip ci]')
     runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ needs.build.outputs.app_version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -99,23 +117,11 @@ jobs:
       - name: Log in to GitHub Container Registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
 
-      - name: Determine image version
-        id: image_version
-        run: |
-          set -euo pipefail
-
-          VERSION=$(node -p "require('./angular-app/package.json').version")
-          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
-            SHORT_SHA=$(git rev-parse --short HEAD)
-            VERSION="${VERSION}-${SHORT_SHA}"
-          fi
-
-          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
-
       - name: Build Docker image
         run: |
           IMAGE=ghcr.io/${{ github.repository_owner }}/course-checker-angular
           docker build angular-app -f angular-app/Dockerfile \
+            --build-arg COURSE_CHECKER_VERSION=${VERSION} \
             -t $IMAGE:${VERSION} \
             -t $IMAGE:latest
 

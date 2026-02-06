@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import versionData from '../assets/version.json';
 import { CourseService } from './services/course.service';
 import { CourseSearchResult } from './models/course.model';
 import { forkJoin } from 'rxjs';
+
+interface VersionInfo {
+  version: string;
+  generatedAt: string;
+}
+
+const versionInfo: VersionInfo = {
+  version: versionData?.version ?? '0.0.0',
+  generatedAt: versionData?.generatedAt ?? ''
+};
 
 @Component({
   selector: 'app-root',
@@ -13,6 +24,8 @@ import { forkJoin } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  readonly appVersion = versionInfo.version;
+  readonly versionGeneratedAt = versionInfo.generatedAt;
   semester: string = '';
   courses: string = '';
   results: CourseSearchResult[] = [];

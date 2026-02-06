@@ -1,4 +1,5 @@
-<div class="container">
+<div class="page-wrapper">
+  <div class="container">
   <div class="header">
     <h1>UofT Course Checker v2</h1>
     <p class="subtitle">Check course availability and enrollment</p>
@@ -86,4 +87,12 @@
       </div>
     </div>
   </div>
+  </div>
+
+  <footer class="app-footer">
+    <span class="footer-label">Version {{ appVersion }}</span>
+    <span *ngIf="versionGeneratedAt" class="footer-timestamp">
+      Built {{ versionGeneratedAt | date:'medium' }}
+    </span>
+  </footer>
 </div>

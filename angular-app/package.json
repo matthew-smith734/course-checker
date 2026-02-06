@@ -3,9 +3,12 @@
   "version": "1.0.2",
   "scripts": {
     "ng": "ng",
+    "prestart": "node scripts/write-version.js",
     "start": "ng serve --proxy-config proxy.conf.js",
     "start:proxy": "node proxy-server.js",
+    "prebuild": "node scripts/write-version.js",
     "build": "ng build --configuration production",
+    "prewatch": "node scripts/write-version.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "release": "standard-version"
