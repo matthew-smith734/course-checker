@@ -40,7 +40,7 @@ async function proxyHandler(req, res) {
 
   // Optional: enforce a simple allow-list of top-level API prefixes.
   // Adjust allowedPrefixes to match the intended upstream API surface.
-  const allowedPrefixes = ['/', '/courses', '/search'];
+  const allowedPrefixes = ['/', '/getOptimizedMatchingCourseTitles'];
   const isAllowed = allowedPrefixes.some(prefix => apiPath === prefix || apiPath.startsWith(prefix + '/'));
   if (!isAllowed) {
     console.warn('[Proxy] Rejected disallowed API path:', apiPath);
@@ -67,10 +67,18 @@ async function proxyHandler(req, res) {
     headers['Content-Type'] = contentType;
   }
 
-  const fetchOptions = {
-    method: req.method,
-    headers,
-  };
+  app.get('*', (req, res) => {
+    const requestPath = req.path;
+    const isAssetLike = Boolean(path.extname(requestPath));
+
+    if (isAssetLike) {
+      console.warn(`[Fallback] Asset not found, serving index.html instead: ${requestPath}`);
+    } else {
+      console.log(`[Fallback] Serving index.html for SPA route: ${requestPath}`);
+    }
+
+    res.sendFile(path.join(DIST_DIR, 'index.html'));
+  });
 
   if (req.method !== 'GET' && req.method !== 'HEAD' && req.body) {
     fetchOptions.body = req.body;
