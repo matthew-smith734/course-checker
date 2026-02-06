@@ -13,7 +13,6 @@ jobs:
   version:
     name: Bump version from commits
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,25 +20,34 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
+      - name: Skip release on non-main refs
+        if: github.event_name != 'push' || github.ref != 'refs/heads/main'
+        run: echo "Not running release workflow here"
+
       - name: Configure Git author
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Set up Node 20
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install Angular dependencies
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
         run: npm ci
         working-directory: angular-app
 
       - name: Create release commit
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
         run: npm run release
         working-directory: angular-app
 
       - name: Push release changes
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git push --follow-tags origin main
