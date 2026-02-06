@@ -49,7 +49,9 @@ jobs:
       - name: Push release changes
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
+          git fetch origin main
+          AHEAD=$(git rev-list --count origin/main..HEAD || true)
+          if [ "$AHEAD" -gt 0 ]; then
             git push --follow-tags origin main
           else
             echo "No release-worthy commits"
