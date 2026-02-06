@@ -7,7 +7,8 @@
     "start:proxy": "node proxy-server.js",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "release": "standard-version"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,7 @@
     "@angular/cli": "^17.0.0",
     "@angular/compiler-cli": "^17.0.0",
     "@types/node": "^20.0.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.2.2",
+    "standard-version": "^9.5.0"
   }
 }
