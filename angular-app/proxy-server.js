@@ -23,8 +23,38 @@ app.options('/api/*', (req, res) => {
 });
 
 async function proxyHandler(req, res) {
-  const targetPath = req.originalUrl.replace(/^\/api/, '');
-  const targetUrl = `${TARGET_BASE}${targetPath}`;
+  // Derive the path under /api (without query string)
+  const apiPath = req.path.replace(/^\/api/, '') || '/';
+
+  // Basic path validation to prevent traversal and unexpected prefixes
+  if (!apiPath.startsWith('/')) {
+    console.warn('[Proxy] Rejected path without leading slash:', apiPath);
+    res.set(CORS_HEADERS);
+    return res.status(400).send('Invalid API path');
+  }
+  if (apiPath.includes('..')) {
+    console.warn('[Proxy] Rejected path with traversal segment:', apiPath);
+    res.set(CORS_HEADERS);
+    return res.status(400).send('Invalid API path');
+  }
+
+  // Optional: enforce a simple allow-list of top-level API prefixes.
+  // Adjust allowedPrefixes to match the intended upstream API surface.
+  const allowedPrefixes = ['/', '/courses', '/search'];
+  const isAllowed = allowedPrefixes.some(prefix => apiPath === prefix || apiPath.startsWith(prefix + '/'));
+  if (!isAllowed) {
+    console.warn('[Proxy] Rejected disallowed API path:', apiPath);
+    res.set(CORS_HEADERS);
+    return res.status(404).send('Not found');
+  }
+
+  // Preserve the original query string while using the validated path
+  const originalUrl = new URL(req.protocol + '://' + req.get('host') + req.originalUrl);
+  const targetUrlObj = new URL(TARGET_BASE);
+  targetUrlObj.pathname = path.posix.join(targetUrlObj.pathname.replace(/\/+$/, ''), apiPath);
+  targetUrlObj.search = originalUrl.search;
+
+  const targetUrl = targetUrlObj.toString();
   console.log(`[Proxy] ${req.method} -> ${targetUrl}`);
 
   const headers = {
