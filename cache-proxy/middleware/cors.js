@@ -2,13 +2,15 @@
  * CORS configuration middleware
  */
 
-// Only requests coming from the Angular UI should be accepted.
-const allowedOrigins = [
-  'http://localhost:4200',
-  'http://angular-frontend:4200'
-];
+// Read allowed origins from the environment so deployments can add new hosts without editing code.
+const defaultOrigins = ['http://localhost:4200', 'http://angular-frontend:4200'];
+const allowedOrigins = (process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(',')
+    .map(origin => origin.trim())
+    .filter(origin => origin.length > 0)
+  : defaultOrigins);
 
-// Only allow the Angular frontend URLs to avoid accidental open proxy behavior.
+// Prevent this cache proxy from acting as an open proxy by whitelisting only trusted origins.
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin) return callback(null, true);

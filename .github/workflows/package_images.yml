@@ -70,12 +70,13 @@ jobs:
             cache-proxy:
               image: course-checker-cache-proxy:{version}
               ports:
-                - \"3000:3000\"
+                - "3000:3000"
               environment:
                 - REDIS_HOST=redis
                 - REDIS_PORT=6379
                 - BACKEND_URL=https://api.easi.utoronto.ca
                 - CACHE_TTL=28800
+                - ALLOWED_ORIGINS=http://localhost:4200,http://angular-frontend:4200
               depends_on:
                 - redis
               restart: unless-stopped
