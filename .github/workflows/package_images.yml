@@ -1,0 +1,128 @@
+name: Package Images for Remote Deployment
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  package:
+    name: Build, bundle, and upload images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine release version
+        id: versioning
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p "require('./angular-app/package.json').version")
+          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+            SHORT_SHA=$(git rev-parse --short HEAD)
+            VERSION="${VERSION}-${SHORT_SHA}"
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "COURSE_CHECKER_VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Angular image
+        run: |
+          docker build angular-app -f angular-app/Dockerfile \
+            --build-arg COURSE_CHECKER_VERSION=${VERSION} \
+            -t course-checker-angular:${VERSION}
+
+      - name: Build cache-proxy image
+        run: |
+          docker build cache-proxy -f cache-proxy/Dockerfile \
+            -t course-checker-cache-proxy:${VERSION}
+
+      - name: Save images to tarballs
+        run: |
+          mkdir -p artifacts
+          docker save course-checker-angular:${VERSION} -o artifacts/course-checker-angular-${VERSION}.tar
+          docker save course-checker-cache-proxy:${VERSION} -o artifacts/course-checker-cache-proxy-${VERSION}.tar
+
+      - name: Generate deployment compose
+        run: |
+          python - <<'PY'
+          from textwrap import dedent
+          from os import environ
+
+          version = environ['VERSION']
+          content = dedent(f"""
+          version: '3.8'
+          services:
+            angular-frontend:
+              image: course-checker-angular:{version}
+              ports:
+                - \"4200:4200\"
+              depends_on:
+                - cache-proxy
+              restart: unless-stopped
+
+            cache-proxy:
+              image: course-checker-cache-proxy:{version}
+              ports:
+                - \"3000:3000\"
+              environment:
+                - REDIS_HOST=redis
+                - REDIS_PORT=6379
+                - BACKEND_URL=https://api.easi.utoronto.ca
+                - CACHE_TTL=28800
+              depends_on:
+                - redis
+              restart: unless-stopped
+
+            redis:
+              image: redis:7-alpine
+              ports:
+                - \"6379:6379\"
+              volumes:
+                - redis-data:/data
+              command: redis-server --appendonly yes
+              restart: unless-stopped
+
+          volumes:
+            redis-data:
+          """)
+
+          with open('docker-compose.package.yml', 'w') as fh:
+              fh.write(content)
+          PY
+
+      - name: Create bundle README
+        run: |
+          python - <<'PY'
+          from textwrap import dedent
+          from os import environ
+
+          version = environ['VERSION']
+          content = dedent(f"""
+          This package contains two pre-built Docker images and a docker-compose recipe.
+
+          1. Run docker load < artifacts/course-checker-angular-{version}.tar
+          2. Run docker load < artifacts/course-checker-cache-proxy-{version}.tar
+          3. Run docker compose -f docker-compose.package.yml up --detach
+
+          The compose file exposes the Angular UI on port 4200, the cache proxy on 3000, and Redis on 6379.
+          """)
+
+          with open('package.README.md', 'w') as fh:
+              fh.write(content)
+          PY
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: course-checker-package-${{ steps.versioning.outputs.version }}
+          path: |
+            artifacts
+            docker-compose.package.yml
+            package.README.md

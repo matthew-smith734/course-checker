@@ -1,27 +1,20 @@
+### Build stage: compiles Angular, then drop artifacts into nginx runtime.
 FROM node:20-alpine AS builder
 WORKDIR /app
-
-# allow Docker builds to inject the sha-tagged version that the workflow already calculated
 ARG COURSE_CHECKER_VERSION
 ENV COURSE_CHECKER_VERSION=${COURSE_CHECKER_VERSION:-}
 
-# install dependencies before compiling
 COPY package*.json ./
 RUN npm install
-
 COPY . .
 RUN npm run build
+### Builder stage: compile the Angular application so the runtime image stays slim.
 
-FROM node:20-alpine AS runtime
-WORKDIR /app
+FROM nginx:alpine AS runtime
+### Runtime stage: serve the compiled SPA with nginx and let it proxy /api.
+WORKDIR /usr/share/nginx/html
+COPY --from=builder /app/dist/course-checker-angular .
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# install only production dependencies
-COPY package*.json ./
-RUN npm install --omit=dev
-
-# copy build artifacts and server
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/proxy-server.js ./proxy-server.js
-
-EXPOSE 3000
-CMD ["node", "proxy-server.js"]
+EXPOSE 4200
+CMD ["nginx", "-g", "daemon off;"]

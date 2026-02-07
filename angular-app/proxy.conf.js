@@ -1,12 +1,13 @@
+// Redirect Angular CLI dev server API requests to the local cache-proxy instance.
+// This mirrors the production nginx/caching setup so dev can test the same flows.
 const PROXY_CONFIG = {
   "/api": {
-    "target": "https://api.easi.utoronto.ca",
-    "secure": true,
+    "target": "http://localhost:3000",
+    "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",
-    "pathRewrite": {
-      "^/api": "/ttb"
-    },
+    "pathRewrite": {},
+    // Log everything during dev so we can trace upstream interactions without cache.
     "onProxyRes": function (proxyRes, req, res) {
       console.log('[Proxy] Response from:', req.url);
       console.log('[Proxy] Status:', proxyRes.statusCode);
@@ -27,6 +28,7 @@ const PROXY_CONFIG = {
         }
       });
     },
+    // Note each request as it leaves the dev server.
     "onProxyReq": function(proxyReq, req, res) {
       console.log('[Proxy] Request to:', req.url);
       console.log('[Proxy] Method:', req.method);
