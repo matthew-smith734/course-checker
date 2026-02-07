@@ -4,22 +4,26 @@ import { Observable, of, throwError } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
 import { CourseSearchResult, CourseSection } from '../models/course.model';
 import { isDevMode } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
-  // Use standalone proxy server in development, Cloudflare Worker in production
-  private readonly API_BASE = isDevMode()
-    ? 'http://localhost:3000/ttb'  // Standalone Node.js proxy server
-    : '/api';  // Cloudflare Worker proxy (now backed by in-container proxy)
+  // Always go through /api; environment controls where /api is routed (dev proxy, nginx, or cache proxy)
+  // All HTTP calls go through the /api prefix so the cache proxy or dev server can handle routing.
+  private readonly API_BASE = environment.apiUrl;
 
   constructor(private http: HttpClient) {
     console.log('CourseService initialized. API_BASE:', this.API_BASE, 'DevMode:', isDevMode());
   }
 
+  /**
+   * Fire the title search, then if we find a match, fetch the full enrollment details.
+   */
   searchCourse(semester: string, courseCode: string): Observable<CourseSearchResult> {
     // Sanitize input to remove any invisible Unicode characters
+    // Normalize user input down to alphanumeric uppercase text so backend requests stay predictable.
     const cleanCourseCode = courseCode.replace(/[\s\u200B\u200C\u200D\u200E\u200F\uFEFF]/g, '').toUpperCase();
     
     if (cleanCourseCode.length < 4) {
@@ -35,6 +39,7 @@ export class CourseService {
     const title = cleanCourseCode.substring(4);
 
     // First API call to check if course exists
+    // Query the optimized title endpoint to determine if the requested pre-existing course exists.
     const searchUrl = `${this.API_BASE}/getOptimizedMatchingCourseTitles?term=${sanitizedCode}&divisions=ARTSC&sessions=${semester}&lowerThreshold=50&upperThreshold=200`;
 
     return this.http.get(searchUrl, { responseType: 'text' }).pipe(
@@ -61,10 +66,14 @@ export class CourseService {
     );
   }
 
+  /**
+   * POST the fully-qualified course code to the pageable endpoint to read all sections.
+   */
   private getCourseDetails(fullCourseCode: string, courseCode: string, semester: string): Observable<CourseSearchResult> {
     const detailsUrl = `${this.API_BASE}/getPageableCourses`;
     
     // Use full course code (e.g. GGR348H1) not sanitized (GGR3)
+    // Compose the JSON payload the backend expects for /getPageableCourses.
     const postData = {
       courseCodeAndTitleProps: {
         courseCode: fullCourseCode,  // Use full course code!
@@ -127,6 +136,9 @@ export class CourseService {
     );
   }
 
+  /**
+   * Pull each <sections> entry from the XML payload so the UI can render the enrollment bars.
+   */
   private extractSections(xmlResponse: string): CourseSection[] {
     const sections: CourseSection[] = [];
     

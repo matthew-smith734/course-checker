@@ -1,0 +1,37 @@
+version: '3.8'
+
+# Builds the Angular frontend, cache proxy, and Redis cache in a single composition so every request can flow through nginx -> cache proxy -> Redis -> UofT API.
+
+services:
+  # Angular frontend builds the UI, serves static assets via nginx, and proxies all `/api` calls to cache-proxy.
+  angular-frontend:
+    build: ./angular-app
+    ports:
+      - "4200:4200"
+    depends_on:
+      - cache-proxy
+
+  # Cache proxy handles every /api request, uses Redis for caching, and forwards to the third-party backend.
+  cache-proxy:
+    build: ./cache-proxy
+    ports:
+      - "3000:3000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - BACKEND_URL=https://api.easi.utoronto.ca
+      - CACHE_TTL=28800
+    depends_on:
+      - redis
+
+  # Redis stores cached GET/POST responses with an 8-hour TTL. Append-only mode keeps data across restarts.
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+
+volumes:
+  redis-data:
