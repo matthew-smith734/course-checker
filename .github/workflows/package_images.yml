@@ -56,7 +56,7 @@ jobs:
           from os import environ
 
           version = environ['VERSION']
-          allowed = '${ALLOWED_ORIGINS:-http://localhost:4200,http://angular-frontend:4200}'
+          allowed = environ.get('ALLOWED_ORIGINS', 'http://localhost:4200,http://angular-frontend:4200')
           content = dedent("""
           version: '3.8'
           services:
