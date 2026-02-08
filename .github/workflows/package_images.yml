@@ -50,7 +50,7 @@ jobs:
           docker save course-checker-cache-proxy:${VERSION} -o artifacts/course-checker-cache-proxy-${VERSION}.tar
 
       - name: Generate deployment compose
-        run: envsubst < ../docker-compose.package.yml.template > docker-compose.package.yml
+        run: envsubst < docker-compose.package.yml.template > docker-compose.package.yml
         env:
           VERSION: ${{ env.VERSION }}
 
