@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  angular-frontend:
+    image: course-checker-angular:${VERSION}
+    ports:
+      - "4200:4200"
+    depends_on:
+      - cache-proxy
+    restart: unless-stopped
+
+  cache-proxy:
+    image: course-checker-cache-proxy:${VERSION}
+    ports:
+      - "3000:3000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - BACKEND_URL=https://api.easi.utoronto.ca
+      - CACHE_TTL=28800
+      - ALLOWED_ORIGINS=$${ALLOWED_ORIGINS:-http://localhost:4200,http://angular-frontend:4200}
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+
+volumes:
+  redis-data:
