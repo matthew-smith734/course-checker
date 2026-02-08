@@ -82,7 +82,10 @@
               <div *ngFor="let time of section.meetingTimes" class="meeting-time">
                 <span class="meeting-day">{{ time.day }}</span>
                 <span class="meeting-hours">{{ time.startTime }} - {{ time.endTime }}</span>
-                <span *ngIf="time.room" class="meeting-room">{{ time.room }}</span>
+                <span *ngIf="time.room" class="meeting-room">
+                  <span class="room-label">Building:</span>
+                  <span class="room-text">{{ time.room }}</span>
+                </span>
               </div>
             </div>
           </div>

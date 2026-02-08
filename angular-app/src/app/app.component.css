@@ -334,6 +334,21 @@
   background-color: #f0f0f0;
   padding: 2px 8px;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.room-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.room-text {
+  font-weight: 500;
+  color: #333;
 }
 
 @media (max-width: 600px) {
