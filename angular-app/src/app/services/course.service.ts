@@ -178,10 +178,14 @@ export class CourseService {
               const maxEnrolmentElement = sectionElement.getElementsByTagName('maxEnrolment')[0];
               
               if (nameElement && currentEnrolmentElement && maxEnrolmentElement) {
+                // Extract meeting times
+                const meetingTimes = this.extractMeetingTimes(sectionElement);
+                
                 sections.push({
                   name: nameElement.textContent || '',
                   currentEnrolment: parseInt(currentEnrolmentElement.textContent || '0'),
-                  maxEnrolment: parseInt(maxEnrolmentElement.textContent || '0')
+                  maxEnrolment: parseInt(maxEnrolmentElement.textContent || '0'),
+                  meetingTimes: meetingTimes
                 });
               }
             }
@@ -196,5 +200,52 @@ export class CourseService {
     sections.sort((a, b) => a.name.localeCompare(b.name));
     
     return sections;
+  }
+
+  /**
+   * Extract meeting times (day, time, room) from a section element
+   */
+  private extractMeetingTimes(sectionElement: Element): any[] {
+    const meetingTimes: any[] = [];
+    
+    try {
+      // Find the <meetingTimes> container
+      let meetingTimesContainer = null;
+      for (let i = 0; i < sectionElement.children.length; i++) {
+        if (sectionElement.children[i].tagName === 'meetingTimes') {
+          meetingTimesContainer = sectionElement.children[i];
+          break;
+        }
+      }
+      
+      if (meetingTimesContainer) {
+        // Each <meetingTimes> child element represents one meeting time
+        for (let j = 0; j < meetingTimesContainer.children.length; j++) {
+          const meetingTimeElement = meetingTimesContainer.children[j];
+          
+          if (meetingTimeElement.tagName === 'meetingTimes') {
+            const dayElement = meetingTimeElement.getElementsByTagName('meetingDay')[0];
+            const startTimeElement = meetingTimeElement.getElementsByTagName('meetingStartTime')[0];
+            const endTimeElement = meetingTimeElement.getElementsByTagName('meetingEndTime')[0];
+            const room1Element = meetingTimeElement.getElementsByTagName('assignedRoom1')[0];
+            const room2Element = meetingTimeElement.getElementsByTagName('assignedRoom2')[0];
+            
+            if (dayElement && startTimeElement && endTimeElement) {
+              const room = room1Element?.textContent || room2Element?.textContent || '';
+              meetingTimes.push({
+                day: dayElement.textContent || '',
+                startTime: startTimeElement.textContent || '',
+                endTime: endTimeElement.textContent || '',
+                room: room.trim()
+              });
+            }
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Error parsing meeting times:', error);
+    }
+    
+    return meetingTimes;
   }
 }

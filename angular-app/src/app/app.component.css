@@ -299,3 +299,51 @@
     gap: 8px;
   }
 }
+
+/* Meeting times styling */
+.meeting-times {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.meeting-time {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.meeting-day {
+  font-weight: 600;
+  color: #002a5c;
+  min-width: 30px;
+}
+
+.meeting-hours {
+  color: #555;
+  font-family: 'Courier New', monospace;
+}
+
+.meeting-room {
+  color: #666;
+  font-size: 0.85rem;
+  margin-left: auto;
+  background-color: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .meeting-time {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .meeting-room {
+    margin-left: 0;
+    width: 100%;
+  }
+}
