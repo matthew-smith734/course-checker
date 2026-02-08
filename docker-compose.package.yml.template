@@ -17,7 +17,7 @@ services:
       - REDIS_PORT=6379
       - BACKEND_URL=https://api.easi.utoronto.ca
       - CACHE_TTL=28800
-      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:4200,http://angular-frontend:4200}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-https://courses.mattsmith.ca,http://192.168.2.165:4200}
     depends_on:
       - redis
     restart: unless-stopped
