@@ -4,9 +4,19 @@
 
 // Read allowed origins from the environment so deployments can add new hosts without editing code.
 const defaultOrigins = ['http://localhost:4200', 'http://angular-frontend:4200'];
+
+function normalize(origin) {
+  if (!origin) return '';
+  const trimmed = origin.trim();
+  if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
+    return trimmed;
+  }
+  return `http://${trimmed}`;
+}
+
 const allowedOrigins = (process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',')
-    .map(origin => origin.trim())
+    .map(normalize)
     .filter(origin => origin.length > 0)
   : defaultOrigins);
 
