@@ -181,12 +181,15 @@ export class CourseService {
                 // Extract meeting times
                 const meetingTimes = this.extractMeetingTimes(sectionElement);
                 
-                sections.push({
+                const section = {
                   name: nameElement.textContent || '',
                   currentEnrolment: parseInt(currentEnrolmentElement.textContent || '0'),
                   maxEnrolment: parseInt(maxEnrolmentElement.textContent || '0'),
                   meetingTimes: meetingTimes
-                });
+                };
+                
+                console.log('Section with meeting times:', section);
+                sections.push(section);
               }
             }
           }
@@ -224,20 +227,42 @@ export class CourseService {
           const meetingTimeElement = meetingTimesContainer.children[j];
           
           if (meetingTimeElement.tagName === 'meetingTimes') {
-            const dayElement = meetingTimeElement.getElementsByTagName('meetingDay')[0];
-            const startTimeElement = meetingTimeElement.getElementsByTagName('meetingStartTime')[0];
-            const endTimeElement = meetingTimeElement.getElementsByTagName('meetingEndTime')[0];
-            const room1Element = meetingTimeElement.getElementsByTagName('assignedRoom1')[0];
-            const room2Element = meetingTimeElement.getElementsByTagName('assignedRoom2')[0];
+            // Get start and end elements
+            const startElement = meetingTimeElement.getElementsByTagName('start')[0];
+            const endElement = meetingTimeElement.getElementsByTagName('end')[0];
+            const buildingElement = meetingTimeElement.getElementsByTagName('building')[0];
             
-            if (dayElement && startTimeElement && endTimeElement) {
-              const room = room1Element?.textContent || room2Element?.textContent || '';
-              meetingTimes.push({
-                day: dayElement.textContent || '',
-                startTime: startTimeElement.textContent || '',
-                endTime: endTimeElement.textContent || '',
-                room: room.trim()
-              });
+            if (startElement && endElement) {
+              // Extract day number and milliseconds
+              const dayNumElement = startElement.getElementsByTagName('day')[0];
+              const startMillisElement = startElement.getElementsByTagName('millisofday')[0];
+              const endMillisElement = endElement.getElementsByTagName('millisofday')[0];
+              
+              if (dayNumElement && startMillisElement && endMillisElement) {
+                const dayNum = parseInt(dayNumElement.textContent || '0');
+                const startMillis = parseInt(startMillisElement.textContent || '0');
+                const endMillis = parseInt(endMillisElement.textContent || '0');
+                
+                // Get room info
+                let room = '';
+                if (buildingElement) {
+                  const buildingCode = buildingElement.getElementsByTagName('buildingCode')[0]?.textContent || '';
+                  const roomNumber = buildingElement.getElementsByTagName('buildingRoomNumber')[0]?.textContent || '';
+                  if (buildingCode) {
+                    room = roomNumber ? `${buildingCode} ${roomNumber}`.trim() : buildingCode;
+                  }
+                }
+                
+                const meetingTime = {
+                  day: this.convertDayNumber(dayNum),
+                  startTime: this.convertMillisToTime(startMillis),
+                  endTime: this.convertMillisToTime(endMillis),
+                  room: room
+                };
+                
+                console.log('Extracted meeting time:', meetingTime);
+                meetingTimes.push(meetingTime);
+              }
             }
           }
         }
@@ -247,5 +272,22 @@ export class CourseService {
     }
     
     return meetingTimes;
+  }
+
+  /**
+   * Convert day number to day abbreviation
+   */
+  private convertDayNumber(dayNum: number): string {
+    const days = ['', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
+    return days[dayNum] || '';
+  }
+
+  /**
+   * Convert milliseconds of day to HH:MM format
+   */
+  private convertMillisToTime(millis: number): string {
+    const hours = Math.floor(millis / 3600000);
+    const minutes = Math.floor((millis % 3600000) / 60000);
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
   }
 }
