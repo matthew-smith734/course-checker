@@ -55,7 +55,19 @@ app.all('/api/*', async (req, res) => {
     // Mirror the previous proxy: strip /api and forward to /ttb on the backend.
     const apiPath = req.originalUrl.replace(/^\/api\/?/, '');
     const backendEndpoint = `${BACKEND_URL}/ttb/${apiPath}`;
-    console.log(`[Proxy] ${req.method} -> ${backendEndpoint}`);
+    
+    // Enhanced logging for debugging
+    if (req.method === 'POST' || req.method === 'PUT' || req.method === 'PATCH') {
+      console.log(`[Proxy] ${req.method} -> ${backendEndpoint}`);
+      console.log('  Headers:', JSON.stringify({
+        'content-type': req.headers['content-type'],
+        'content-length': req.headers['content-length'],
+        'accept': req.headers['accept']
+      }, null, 2));
+      console.log('  Body:', JSON.stringify(req.body, null, 2));
+    } else {
+      console.log(`[Proxy] ${req.method} -> ${backendEndpoint}`);
+    }
 
     const headers = {
       Accept: req.headers['accept'] || '*/*',
